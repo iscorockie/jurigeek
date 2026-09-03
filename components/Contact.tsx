@@ -1,6 +1,7 @@
 import { PhoneIcon, WhatsAppIcon, TikTokIcon, XIcon, InstagramIcon, ArrowIcon } from "./Icons";
 import { siteConfig, waLink } from "./SiteConfig";
 import { Orbs, GridOverlay } from "./Effects";
+import { CreateAccountForm } from "./CreateAccountForm";
 
 export function Contact() {
   return (
@@ -19,7 +20,14 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
+        {/* Create account */}
+        <div className="glass-card mt-10 p-6 sm:p-8">
+          <div className="mx-auto max-w-md">
+            <CreateAccountForm />
+          </div>
+        </div>
+
+        <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-3">
           {/* Phones */}
           <div className="glass-card p-8 lg:col-span-2">
             <h3 className="text-xl font-extrabold text-ink">Call or WhatsApp</h3>

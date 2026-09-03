@@ -9,7 +9,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => setScrolled(window.scrollY > 16);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -23,7 +23,11 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="container-x flex h-[4.5rem] items-center justify-between">
+      <nav
+        className={`container-x flex items-center justify-between transition-[height] duration-300 ease-out ${
+          scrolled ? "h-[60px]" : "h-20"
+        }`}
+      >
         <a href="/" aria-label="Jurigeek home" className="shrink-0">
           <Logo className="h-8" color="#ffffff" />
         </a>
@@ -43,7 +47,7 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href="#contact"
-            className="hidden text-sm font-semibold text-ink-soft transition hover:text-ink md:inline-flex"
+            className="btn-light hidden !rounded-xl !px-5 !py-2.5 !text-sm md:inline-flex"
           >
             Sign In
           </a>
@@ -87,7 +91,14 @@ export function Navbar() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-gradient-to-r from-orange-400 to-orange-500 px-6 py-3 text-center text-sm font-bold text-purple-950"
+              className="btn-light mt-2 w-full !rounded-xl"
+            >
+              Sign In
+            </a>
+            <a
+              href="#contact"
+              onClick={() => setOpen(false)}
+              className="rounded-full bg-gradient-to-r from-orange-400 to-orange-500 px-6 py-3 text-center text-sm font-bold text-purple-950"
             >
               Get Started
             </a>
