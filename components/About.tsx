@@ -1,65 +1,57 @@
-import { GradientDivider } from "./Divider";
-
-const pillars = [
-  {
-    title: "Access",
-    desc: "Justice should not depend on who you know or what you can afford. We lower the barriers that keep people from the law.",
-  },
-  {
-    title: "Clarity",
-    desc: "We turn dense legal and technical complexity into language and systems people can actually use.",
-  },
-  {
-    title: "Integrity",
-    desc: "Technology is a means, not the message. Human judgment and ethics stay at the centre of everything we build.",
-  },
-];
+import { ArrowIcon } from "./Icons";
 
 export function About() {
   return (
-    <section id="about" className="relative scroll-mt-20 py-24 sm:py-28">
-      <div className="container-x">
+    <section id="about" className="relative scroll-mt-20 bg-cream-50 py-24 sm:py-28">
+      <div className="grid-bg pointer-events-none absolute inset-0 opacity-[0.35]" style={{ backgroundImage: "radial-gradient(rgba(19,35,26,0.06) 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
+      <div className="container-x relative">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
           <div>
-            <span className="eyebrow">Why Jurigeek</span>
-            <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-              The justice gap is a problem of <span className="text-gradient">design</span> — not of will.
+            <span className="eyebrow">About Us</span>
+            <h2 className="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl lg:text-5xl">
+              We build the systems that make legal work <span className="text-leaf-700">simpler and fairer</span>.
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-slate-400">
-              Millions of people never access the legal help they are entitled to,
+            <p className="mt-6 text-lg leading-relaxed text-ink-soft">
+              Thousands of people never access the legal help they are entitled to,
               and the institutions meant to serve them are stretched thin. Jurigeek
-              exists to change that: by automating the mechanics of legal work,
-              advising on the tech laws shaping our digital lives, and teaching the
-              people who will carry it forward.
+              exists to change that — automating the mechanics of legal work,
+              advising on the tech laws shaping our lives, and teaching the people
+              who will carry it forward.
             </p>
-
-            <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-3">
-              {pillars.map((p) => (
-                <div key={p.title} className="card rounded-xl p-5">
-                  <div className="h-1 w-8 rounded-full bg-gradient-to-r from-mint-400 to-brand-400" />
-                  <h3 className="mt-4 text-lg font-bold text-white">{p.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-400">{p.desc}</p>
-                </div>
-              ))}
-            </div>
+            <a href="#services" className="mt-8 inline-flex items-center gap-2 text-base font-bold text-ink transition hover:text-leaf-700">
+              Learn more
+              <ArrowIcon className="h-4 w-4" />
+            </a>
           </div>
 
-          <div className="relative">
-            <GradientDivider />
-            <div className="relative rounded-3xl border border-white/10 bg-gradient-to-br from-ink-800/80 to-ink-900/80 p-8 shadow-card backdrop-blur sm:p-10">
-              <p className="text-2xl font-bold leading-snug text-white sm:text-3xl">
-                &ldquo;We believe technology should make the law{" "}
-                <span className="text-gradient">work for people</span> — not the
-                other way around.&rdquo;
-              </p>
-              <div className="mt-8 flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-mint-500 text-lg font-bold text-white">
-                  J
-                </div>
-                <div>
-                  <p className="font-semibold text-white">The Jurigeek Team</p>
-                  <p className="text-sm text-slate-400">Jurigeek · Kampala, Uganda</p>
-                </div>
+          {/* stats widget card */}
+          <div className="relative mx-auto w-full max-w-sm">
+            <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-lime-200/60 via-transparent to-cream-200/60 blur-2xl" />
+            <div className="card-light overflow-hidden rounded-3xl p-6">
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-bold text-ink">Access to justice</span>
+                <span className="chip !text-leaf-700">Live</span>
+              </div>
+              <div className="mt-6 flex items-end gap-2">
+                <span className="text-5xl font-extrabold text-ink">49%</span>
+                <span className="mb-2 text-xs font-semibold text-ink-soft">of people miss legal help</span>
+              </div>
+              <div className="mt-4 h-3 w-full overflow-hidden rounded-full bg-cream-200">
+                <div className="h-full w-[49%] rounded-full bg-gradient-to-r from-lime-400 to-leaf-700" />
+              </div>
+
+              <div className="mt-6 grid grid-cols-2 gap-3">
+                {[
+                  { icon: "⚖", label: "Automate" },
+                  { icon: "🗂", label: "Advise" },
+                  { icon: "🧠", label: "Educate" },
+                  { icon: "🛡", label: "Compliance" },
+                ].map((m) => (
+                  <div key={m.label} className="rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-center">
+                    <div className="text-lg">{m.icon}</div>
+                    <div className="mt-1 text-xs font-bold text-ink">{m.label}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
