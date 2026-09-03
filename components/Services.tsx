@@ -3,6 +3,7 @@ import { SectionHeading } from "./SectionHeading";
 
 export const services = [
   {
+    href: "/legalautomation",
     icon: BotIcon,
     tag: "Legal Automation",
     title: "Legal automation",
@@ -11,6 +12,7 @@ export const services = [
     tint: "bg-lime-200/70 text-leaf-800",
   },
   {
+    href: "#contact",
     icon: ShieldIcon,
     tag: "Technology Law Consultancy",
     title: "Technology law consultancy",
@@ -19,6 +21,7 @@ export const services = [
     tint: "bg-cream-200 text-leaf-800",
   },
   {
+    href: "#contact",
     icon: GraduationIcon,
     tag: "Tech Law Education",
     title: "Tech law education",
@@ -65,7 +68,7 @@ export function Services() {
                 ))}
               </ul>
               <a
-                href="#contact"
+                href={s.href}
                 className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-bold text-leaf-700 transition group-hover:text-ink"
               >
                 Start a conversation

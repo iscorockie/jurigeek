@@ -22,7 +22,7 @@ export function Navbar() {
       }`}
     >
       <nav className="container-x flex h-[4.5rem] items-center justify-between">
-        <a href="#top" aria-label="Jurigeek home" className="shrink-0 text-ink">
+        <a href="/" aria-label="Jurigeek home" className="shrink-0 text-ink">
           <Logo />
         </a>
 

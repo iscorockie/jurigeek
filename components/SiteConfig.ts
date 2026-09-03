@@ -15,10 +15,10 @@ export const siteConfig = {
     url: "https://x.com/hakeemcounsel",
   },
   nav: [
-    { label: "Services", href: "#services" },
-    { label: "About", href: "#about" },
-    { label: "Education", href: "#education" },
-    { label: "Contact", href: "#contact" },
+    { label: "Services", href: "/#services" },
+    { label: "About", href: "/#about" },
+    { label: "Education", href: "/#education" },
+    { label: "Contact", href: "/#contact" },
   ],
 };
 
