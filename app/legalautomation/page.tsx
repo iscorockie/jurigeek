@@ -118,7 +118,7 @@ export default function LegalAutomationPage() {
                   alt="Automated legal document drafting on a laptop with scales of justice"
                   className="relative aspect-[4/3] w-full rounded-3xl object-cover shadow-card"
                 />
-                <div className="glass-card absolute -bottom-5 -left-4 flex items-center gap-3 !rounded-2xl !border-white/70 !bg-white/70 !p-4">
+                <div className="glass-card absolute -bottom-5 -left-4 flex items-center gap-3 !rounded-2xl !border-white/[0.12] !bg-white/[0.05] !p-4">
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-orange-400 to-orange-600 text-white">
                     <BotIcon className="h-6 w-6" />
                   </div>

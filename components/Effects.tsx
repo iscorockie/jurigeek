@@ -5,9 +5,9 @@
 
 /** Large soft gradient orbs that drift slowly. */
 export function Orbs({ variant = "light" }: { variant?: "light" | "dark" }) {
-  const purple = variant === "light" ? "rgba(124,58,237,0.35)" : "rgba(167,139,250,0.30)";
-  const orange = variant === "light" ? "rgba(249,115,22,0.30)" : "rgba(249,115,22,0.22)";
-  const white = variant === "light" ? "rgba(255,255,255,0.7)" : "rgba(255,255,255,0.10)";
+  const purple = variant === "light" ? "rgba(139,92,246,0.28)" : "rgba(167,139,250,0.30)";
+  const orange = variant === "light" ? "rgba(249,115,22,0.22)" : "rgba(249,115,22,0.22)";
+  const white = variant === "light" ? "rgba(196,181,253,0.12)" : "rgba(255,255,255,0.10)";
   return (
     <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
       <div

@@ -19,7 +19,7 @@ export function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all ${
         scrolled
-          ? "border-b border-white/50 bg-white/60 shadow-[0_8px_30px_-18px_rgba(88,28,135,0.5)] backdrop-blur-xl"
+          ? "border-b border-white/10 bg-white/[0.06] shadow-[0_8px_30px_-18px_rgba(0,0,0,0.7)] backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
@@ -49,7 +49,7 @@ export function Navbar() {
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
             aria-expanded={open}
-            className="inline-flex items-center justify-center rounded-full border border-purple-900/15 bg-white/50 p-2.5 text-ink backdrop-blur lg:hidden"
+            className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.06] p-2.5 text-ink backdrop-blur lg:hidden"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               {open ? (
@@ -70,7 +70,7 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-4 py-3 text-base font-semibold text-ink transition hover:bg-white"
+                className="rounded-xl px-4 py-3 text-base font-semibold text-ink transition hover:bg-white/10"
               >
                 {item.label}
               </a>

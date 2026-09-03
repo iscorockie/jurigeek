@@ -36,7 +36,7 @@ export function About() {
               ))}
             </div>
 
-            <a href="#services" className="mt-6 inline-flex items-center gap-2 text-base font-bold text-ink transition hover:text-purple-700">
+            <a href="#services" className="mt-6 inline-flex items-center gap-2 text-base font-bold text-ink transition hover:text-purple-300">
               Learn more
               <ArrowIcon className="h-4 w-4" />
             </a>
@@ -48,7 +48,7 @@ export function About() {
             <div className="glass-card overflow-hidden !rounded-3xl !p-6">
               <div className="flex items-center justify-between">
                 <span className="text-sm font-bold text-ink">Access to justice</span>
-                <span className="chip !text-purple-700">
+                <span className="chip !text-purple-200">
                   <span className="relative flex h-2 w-2">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-75" />
                     <span className="relative inline-flex h-2 w-2 rounded-full bg-orange-400" />
@@ -60,7 +60,7 @@ export function About() {
                 <span className="font-nexa gradient-text text-5xl font-extrabold tabular-nums">49%</span>
                 <span className="mb-2 text-xs font-semibold text-ink-soft">of people miss legal help</span>
               </div>
-              <div className="mt-4 h-3 w-full overflow-hidden rounded-full bg-white/60">
+              <div className="mt-4 h-3 w-full overflow-hidden rounded-full bg-white/[0.05]">
                 <div className="h-full w-[49%] rounded-full bg-gradient-to-r from-purple-600 to-orange-400" />
               </div>
 
@@ -71,7 +71,7 @@ export function About() {
                   { icon: "🧠", label: "Educate" },
                   { icon: "🛡", label: "Compliance" },
                 ].map((m) => (
-                  <div key={m.label} className="rounded-xl border border-white/70 bg-white/60 px-4 py-3 text-center backdrop-blur">
+                  <div key={m.label} className="rounded-xl border border-white/[0.12] bg-white/[0.05] px-4 py-3 text-center backdrop-blur">
                     <div className="text-lg">{m.icon}</div>
                     <div className="mt-1 text-xs font-bold text-ink">{m.label}</div>
                   </div>

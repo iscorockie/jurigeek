@@ -29,7 +29,7 @@ export const metadata: Metadata = {
       "Bridging access to justice through legal automation, technology law consultancy and tech law education.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-dark.jpg",
         width: 1200,
         height: 630,
         alt: "Jurigeek — Bridging access to justice through legal automation",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
       "Bridging access to justice through legal automation, technology law consultancy and tech law education.",
     site: "@hakeemcounsel",
     creator: "@hakeemcounsel",
-    images: ["/og-image.jpg"],
+    images: ["/og-dark.jpg"],
   },
   robots: {
     index: true,
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#faf9ff",
+  themeColor: "#0b0716",
   width: "device-width",
   initialScale: 1,
 };

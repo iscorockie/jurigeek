@@ -65,7 +65,7 @@ export function Audience() {
               className="glass-card group flex flex-col !rounded-3xl transition duration-300 hover:-translate-y-1.5 hover:shadow-glow"
             >
               <div className="flex items-center justify-between">
-                <span className="font-nexa text-4xl font-extrabold tabular-nums text-purple-900/10 transition group-hover:text-purple-600/30">
+                <span className="font-nexa text-4xl font-extrabold tabular-nums text-purple-300/20 transition group-hover:text-purple-300/50">
                   {a.n}
                 </span>
                 <div className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br ${a.tint} text-white shadow-lg`}>
@@ -75,7 +75,7 @@ export function Audience() {
               <span className="mt-5 text-xs font-bold uppercase tracking-[0.15em] text-orange-500">{a.tag}</span>
               <h3 className="mt-1 text-xl font-extrabold text-ink">{a.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-ink-soft">{a.desc}</p>
-              <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-bold text-purple-700 transition group-hover:text-orange-500">
+              <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-bold text-purple-300 transition group-hover:text-orange-400">
                 Explore
                 <ArrowIcon className="h-4 w-4 transition group-hover:translate-x-0.5" />
               </span>

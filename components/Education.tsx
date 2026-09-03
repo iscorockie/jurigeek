@@ -26,7 +26,7 @@ export function Education() {
               className="relative aspect-[4/3] w-full rounded-3xl object-cover shadow-card"
               loading="lazy"
             />
-            <div className="glass-card absolute -bottom-5 left-6 flex items-center gap-3 !rounded-2xl !border-white/70 !bg-white/70 !p-4 !shadow-card">
+            <div className="glass-card absolute -bottom-5 left-6 flex items-center gap-3 !rounded-2xl !border-white/[0.12] !bg-white/[0.05] !p-4 !shadow-card">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-orange-400 to-orange-600 text-white">
                 <GraduationIcon className="h-6 w-6" />
               </div>
@@ -51,7 +51,7 @@ export function Education() {
 
             <ul className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {outcomes.map((o) => (
-                <li key={o} className="glass flex items-start gap-3 !rounded-xl !border-white/70 !bg-white/60 p-4">
+                <li key={o} className="glass flex items-start gap-3 !rounded-xl p-4">
                   <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-purple-600 to-orange-400 text-white">
                     <CheckIcon className="h-3.5 w-3.5" />
                   </span>

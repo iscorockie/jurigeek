@@ -39,7 +39,7 @@ export function Hero() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
           {/* ---- Left: headline + proof ---- */}
           <div className="lg:col-span-6">
-            <span className="glass eyebrow !inline-flex !rounded-full !border-white/60 !bg-white/60 !px-4 !py-2">
+            <span className="glass eyebrow !inline-flex !rounded-full !border-white/15 !bg-white/[0.06] !px-4 !py-2">
               <span className="h-1.5 w-1.5 rounded-full bg-orange-400" />
               Legal automation · Tech law · AI
             </span>
@@ -92,8 +92,8 @@ export function Hero() {
 
             <div className="mt-6 flex flex-wrap gap-2">
               {trustItems.map((t) => (
-                <span key={t} className="chip !text-purple-800">
-                  <CheckIcon className="h-3.5 w-3.5 text-orange-500" />
+                <span key={t} className="chip !text-purple-200">
+                  <CheckIcon className="h-3.5 w-3.5 text-orange-400" />
                   {t}
                 </span>
               ))}
@@ -111,11 +111,11 @@ export function Hero() {
             {/* main dashboard card */}
             <div className="glass-card relative z-10 !rounded-[1.75rem] !p-5">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2 text-xs font-bold text-purple-700">
+                <div className="flex items-center gap-2 text-xs font-bold text-purple-300">
                   <BotIcon className="h-4 w-4" />
                   Contract Draft — AI
                 </div>
-                <span className="chip !px-2.5 !py-1 !text-[10px] !text-purple-700">LIVE</span>
+                <span className="chip !px-2.5 !py-1 !text-[10px] !text-purple-300">LIVE</span>
               </div>
 
               <div className="mt-4 space-y-2.5">
@@ -125,21 +125,21 @@ export function Hero() {
                   { label: "Clause 4.2", value: "Liability", pct: "w-[64%]" },
                   { label: "Jurisdiction", value: "Uganda", pct: "w-[58%]" },
                 ].map((row) => (
-                  <div key={row.label} className="flex items-center justify-between rounded-xl border border-purple-200/50 bg-white/70 px-3 py-2.5">
+                  <div key={row.label} className="flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2.5">
                     <span className="text-[11px] font-semibold text-ink-soft">{row.label}</span>
-                    <span className="rounded-md bg-purple-100/80 px-2 py-0.5 text-[11px] font-bold text-purple-700">
+                    <span className="rounded-md bg-purple-500/20 px-2 py-0.5 text-[11px] font-bold text-purple-200">
                       {row.value}
                     </span>
-                    <div className="hidden h-1.5 w-16 overflow-hidden rounded-full bg-purple-100 sm:block">
-                      <div className={`h-full ${row.pct} rounded-full bg-gradient-to-r from-purple-500 to-orange-400`} />
+                    <div className="hidden h-1.5 w-16 overflow-hidden rounded-full bg-white/10 sm:block">
+                      <div className={`h-full ${row.pct} rounded-full bg-gradient-to-r from-purple-400 to-orange-400`} />
                     </div>
                   </div>
                 ))}
               </div>
 
               {/* AI suggestion */}
-              <div className="mt-4 rounded-2xl border border-orange-200/70 bg-orange-50/70 p-4">
-                <div className="flex items-center gap-2 text-xs font-bold text-orange-600">
+              <div className="mt-4 rounded-2xl border border-orange-400/25 bg-orange-400/[0.08] p-4">
+                <div className="flex items-center gap-2 text-xs font-bold text-orange-300">
                   <SparklesIcon className="h-4 w-4" />
                   AI drafting
                 </div>
@@ -147,11 +147,11 @@ export function Hero() {
                   Clause 4.2 populated with standard liability wording and verified against your clause library.
                 </p>
                 <div className="mt-3 flex gap-2">
-                  <span className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-purple-600 to-purple-800 px-3 py-1.5 text-[11px] font-bold text-white">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-purple-500 to-purple-700 px-3 py-1.5 text-[11px] font-bold text-white">
                     <CheckIcon className="h-3 w-3" />
                     Accept
                   </span>
-                  <span className="inline-flex items-center rounded-full border border-purple-200/60 bg-white/70 px-3 py-1.5 text-[11px] font-bold text-purple-700">
+                  <span className="inline-flex items-center rounded-full border border-white/15 bg-white/[0.06] px-3 py-1.5 text-[11px] font-bold text-purple-200">
                     Edit
                   </span>
                 </div>
@@ -161,24 +161,24 @@ export function Hero() {
               <div className="mt-4">
                 <div className="flex items-center justify-between text-[11px] font-semibold text-ink-soft">
                   <span>Assembling clauses</span>
-                  <span className="font-nexa tabular-nums text-purple-700">42/50</span>
+                  <span className="font-nexa tabular-nums text-purple-300">42/50</span>
                 </div>
-                <div className="mt-1.5 h-2 w-full overflow-hidden rounded-full bg-purple-100">
-                  <div className="h-full w-[84%] rounded-full bg-gradient-to-r from-purple-500 to-orange-400" />
+                <div className="mt-1.5 h-2 w-full overflow-hidden rounded-full bg-white/10">
+                  <div className="h-full w-[84%] rounded-full bg-gradient-to-r from-purple-400 to-orange-400" />
                 </div>
               </div>
             </div>
 
             {/* floating accents */}
-            <div className="glass absolute -left-4 top-8 z-20 hidden rounded-2xl !px-3 !py-2 text-xs font-semibold text-purple-700 sm:flex sm:items-center sm:gap-2">
+            <div className="glass absolute -left-4 top-8 z-20 hidden rounded-2xl !px-3 !py-2 text-xs font-semibold text-purple-300 sm:flex sm:items-center sm:gap-2">
               <ScaleIcon className="h-4 w-4 text-orange-500" />
               Compliance{" "}
-              <span className="font-nexa tabular-nums text-green-600">✓</span>
+              <span className="font-nexa tabular-nums text-orange-400">✓</span>
             </div>
-            <div className="glass absolute -right-3 bottom-6 z-20 rounded-2xl !px-3 !py-2 text-xs font-semibold text-purple-700">
+            <div className="glass absolute -right-3 bottom-6 z-20 rounded-2xl !px-3 !py-2 text-xs font-semibold text-purple-300">
               <span className="font-nexa tabular-nums">−62%</span> manual work
             </div>
-            <div className="glass absolute -bottom-4 right-14 z-20 hidden rounded-2xl !px-3 !py-2 text-xs font-semibold text-purple-700 md:block">
+            <div className="glass absolute -bottom-4 right-14 z-20 hidden rounded-2xl !px-3 !py-2 text-xs font-semibold text-purple-300 md:block">
               <ShieldIcon className="mr-1 inline h-4 w-4 text-orange-500" />
               Encrypted &amp; secure
             </div>
@@ -188,10 +188,10 @@ export function Hero() {
 
       {/* ---- Trust metrics band ---- */}
       <div className="container-x relative mt-14 pb-16 sm:pb-20">
-        <div className="glass grid grid-cols-2 gap-px overflow-hidden rounded-3xl !border-white/70 !bg-white/40 md:grid-cols-4">
+        <div className="glass grid grid-cols-2 gap-px overflow-hidden rounded-3xl !border-white/[0.12] !bg-white/[0.04] md:grid-cols-4">
           {heroStats.map((s) => (
-            <div key={s.label} className="bg-white/60 px-6 py-6 text-center backdrop-blur">
-              <p className="font-nexa text-3xl font-extrabold tabular-nums text-purple-800 sm:text-4xl">
+            <div key={s.label} className="bg-white/[0.03] px-6 py-6 text-center">
+              <p className="font-nexa text-3xl font-extrabold tabular-nums text-purple-300 sm:text-4xl">
                 {s.value}
               </p>
               <p className="mt-1 text-xs font-semibold text-ink-soft">{s.label}</p>

@@ -5,15 +5,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // White / light surface (was "cream") — subtle lavender-white so white cards stay distinct
+        // Dark futuristic surfaces (was light "brand" lavender) — used as section/page backgrounds
         brand: {
-          50: "#ffffff",
-          100: "#faf9ff",
-          200: "#f1eefc",
-          300: "#e6e1f8",
+          50: "#06030d",
+          100: "#0b0716",
+          200: "#130c23",
+          300: "#1c1332",
+          400: "#271b45",
         },
-        // Purple (was "leaf") — dark feature bands, footer, primary dark buttons
+        // Purple — primary brand accent + dark feature bands
         purple: {
+          300: "#c4b5fd",
           400: "#a78bfa",
           500: "#8b5cf6",
           600: "#7c3aed",
@@ -22,7 +24,7 @@ const config: Config = {
           900: "#4c1d95",
           950: "#2e1065",
         },
-        // Orange (was "lime") — accent CTAs, prices, highlights
+        // Orange — accent CTAs, prices, highlights
         orange: {
           100: "#ffedd5",
           200: "#fed7aa",
@@ -31,17 +33,17 @@ const config: Config = {
           500: "#f97316",
           600: "#ea580c",
         },
-        // Text (dark purple)
+        // Text (light on dark) — was dark purple ink
         ink: {
-          DEFAULT: "#2e1065",
-          soft: "#5b537f",
+          DEFAULT: "#f4f1ff",
+          soft: "#b3a7d6",
         },
-        // Backwards-compatible aliases so existing class names keep working
+        // Aliases for sections that reference old names
         cream: {
-          50: "#ffffff",
-          100: "#faf9ff",
-          200: "#f1eefc",
-          300: "#e6e1f8",
+          50: "#f4f1ff",
+          100: "#ece6ff",
+          200: "#d8cef5",
+          300: "#b8abd9",
         },
         leaf: {
           400: "#a78bfa",
@@ -49,7 +51,7 @@ const config: Config = {
           700: "#6d28d9",
           800: "#5b21b6",
           900: "#4c1d95",
-          950: "#2e1065",
+          950: "#160a33",
         },
         lime: {
           100: "#ffedd5",
@@ -66,10 +68,11 @@ const config: Config = {
         nexa: ["Nexa", "Nexa Bold", "Nexa Light", "Nexa Book", "Sora", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        card: "0 24px 60px -24px rgba(46, 16, 101, 0.18)",
-        pill: "0 10px 30px -12px rgba(46, 16, 101, 0.25)",
-        glow: "0 0 40px -10px rgba(124, 58, 237, 0.5)",
-        "glow-orange": "0 0 40px -10px rgba(249, 115, 22, 0.5)",
+        card: "0 24px 60px -24px rgba(0, 0, 0, 0.7)",
+        pill: "0 10px 30px -12px rgba(0, 0, 0, 0.6)",
+        glow: "0 0 50px -10px rgba(139, 92, 246, 0.55)",
+        "glow-orange": "0 0 50px -10px rgba(249, 115, 22, 0.5)",
+        "glow-soft": "0 0 30px -8px rgba(139, 92, 246, 0.35)",
       },
       keyframes: {
         floaty: {
@@ -88,12 +91,17 @@ const config: Config = {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.25" },
         },
+        rise: {
+          "0%": { opacity: "0", transform: "translateY(24px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         floaty: "floaty 6s ease-in-out infinite",
         marquee: "marquee 28s linear infinite",
         floatSlow: "floatSlow 18s ease-in-out infinite",
         blink: "blink 2.4s ease-in-out infinite",
+        rise: "rise 0.7s ease-out both",
       },
     },
   },

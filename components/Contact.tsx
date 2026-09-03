@@ -27,7 +27,7 @@ export function Contact() {
             <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {siteConfig.phones.map((p) => (
                 <div key={p.tel} className="glass !rounded-2xl !p-6">
-                  <span className="font-nexa text-sm font-extrabold tabular-nums uppercase tracking-wide text-purple-700">
+                  <span className="font-nexa text-sm font-extrabold tabular-nums uppercase tracking-wide text-purple-300">
                     {p.label}
                   </span>
                   <div className="mt-4 flex flex-wrap gap-2">
@@ -71,7 +71,7 @@ export function Contact() {
                   <p className="text-sm font-bold text-ink">TikTok</p>
                   <p className="text-xs text-ink-soft">{siteConfig.tiktok.handle}</p>
                 </div>
-                <ArrowIcon className="ml-auto h-4 w-4 text-ink-soft transition group-hover:translate-x-0.5 group-hover:text-purple-700" />
+                <ArrowIcon className="ml-auto h-4 w-4 text-ink-soft transition group-hover:translate-x-0.5 group-hover:text-purple-300" />
               </a>
               <a
                 href={siteConfig.twitter.url}
@@ -86,7 +86,7 @@ export function Contact() {
                   <p className="text-sm font-bold text-ink">X (Twitter)</p>
                   <p className="text-xs text-ink-soft">{siteConfig.twitter.handle}</p>
                 </div>
-                <ArrowIcon className="ml-auto h-4 w-4 text-ink-soft transition group-hover:translate-x-0.5 group-hover:text-purple-700" />
+                <ArrowIcon className="ml-auto h-4 w-4 text-ink-soft transition group-hover:translate-x-0.5 group-hover:text-purple-300" />
               </a>
             </div>
           </div>

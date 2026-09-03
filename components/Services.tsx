@@ -60,7 +60,7 @@ export function Services() {
               <div className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl shadow-lg ${s.tint}`}>
                 <s.icon className="h-7 w-7" />
               </div>
-              <span className="mt-6 text-xs font-bold uppercase tracking-[0.15em] text-purple-600">
+              <span className="mt-6 text-xs font-bold uppercase tracking-[0.15em] text-purple-300">
                 {s.tag}
               </span>
               <h3 className="mt-2 text-2xl font-extrabold text-ink">{s.title}</h3>
@@ -68,14 +68,14 @@ export function Services() {
               <ul className="mt-6 space-y-2.5">
                 {s.points.map((p) => (
                   <li key={p} className="flex items-start gap-2.5 text-sm text-ink-soft">
-                    <ScaleIcon className="mt-0.5 h-4 w-4 shrink-0 text-purple-600" />
+                    <ScaleIcon className="mt-0.5 h-4 w-4 shrink-0 text-purple-300" />
                     {p}
                   </li>
                 ))}
               </ul>
               <a
                 href={s.href}
-                className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-bold text-purple-700 transition group-hover:text-orange-500"
+                className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-bold text-purple-300 transition group-hover:text-orange-400"
               >
                 Start a conversation
                 <ArrowIcon className="h-4 w-4" />
