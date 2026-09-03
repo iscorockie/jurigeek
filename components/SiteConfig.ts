@@ -14,6 +14,10 @@ export const siteConfig = {
     handle: "@hakeemcounsel",
     url: "https://x.com/hakeemcounsel",
   },
+  instagram: {
+    handle: "@juri_geek",
+    url: "https://www.instagram.com/juri_geek?utm_source=qr",
+  },
   nav: [
     { label: "Services", href: "/#services" },
     { label: "Juri AI", href: "/#juri-ai" },

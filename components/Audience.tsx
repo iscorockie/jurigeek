@@ -18,7 +18,7 @@ const audiences = [
     title: "For Founders & Startups",
     tag: "Navigate tech law",
     desc: "Get practical advisory on data protection, compliance and digital contracts — clear guidance for builders and innovators.",
-    href: "/#contact",
+    href: "/techlaw-consultancy",
     tint: "from-orange-400 to-orange-600",
   },
   {
@@ -27,7 +27,7 @@ const audiences = [
     title: "For Students & Future Lawyers",
     tag: "Learn tech law",
     desc: "Access tech law education, mentorship and real-world learning that prepares you for the digital legal economy.",
-    href: "/#education",
+    href: "/tech-law-education",
     tint: "from-purple-700 to-purple-950",
   },
   {

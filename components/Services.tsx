@@ -14,7 +14,7 @@ export const services = [
     glow: "group-hover:shadow-glow",
   },
   {
-    href: "#contact",
+    href: "/techlaw-consultancy",
     icon: ShieldIcon,
     tag: "Technology Law Consultancy",
     title: "Technology law consultancy",
@@ -24,7 +24,7 @@ export const services = [
     glow: "group-hover:shadow-glow-orange",
   },
   {
-    href: "#contact",
+    href: "/tech-law-education",
     icon: GraduationIcon,
     tag: "Tech Law Education",
     title: "Tech law education",

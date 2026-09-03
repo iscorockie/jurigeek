@@ -1,5 +1,5 @@
 import { Logo } from "./Logo";
-import { TikTokIcon, XIcon } from "./Icons";
+import { TikTokIcon, XIcon, InstagramIcon } from "./Icons";
 import { siteConfig } from "./SiteConfig";
 
 export function Footer() {
@@ -38,6 +38,15 @@ export function Footer() {
               >
                 <XIcon className="h-4 w-4" />
               </a>
+              <a
+                href={siteConfig.instagram.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Jurigeek on Instagram"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-cream-100/80 transition hover:bg-lime-400 hover:text-ink"
+              >
+                <InstagramIcon className="h-4 w-4" />
+              </a>
             </div>
           </div>
 
@@ -67,6 +76,11 @@ export function Footer() {
               <li>
                 <a href={siteConfig.tiktok.url} target="_blank" rel="noopener noreferrer" className="transition hover:text-cream-100">
                   {siteConfig.tiktok.handle}
+                </a>
+              </li>
+              <li>
+                <a href={siteConfig.instagram.url} target="_blank" rel="noopener noreferrer" className="transition hover:text-cream-100">
+                  {siteConfig.instagram.handle}
                 </a>
               </li>
             </ul>

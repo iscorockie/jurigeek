@@ -95,6 +95,16 @@ export function XIcon(props: P) {
   );
 }
 
+export function InstagramIcon(props: P) {
+  return (
+    <svg {...base} {...props}>
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <path d="M17.2 6.8h.01" />
+    </svg>
+  );
+}
+
 export function CheckIcon(props: P) {
   return (
     <svg {...base} {...props}>

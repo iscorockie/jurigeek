@@ -1,4 +1,4 @@
-import { PhoneIcon, WhatsAppIcon, TikTokIcon, XIcon, ArrowIcon } from "./Icons";
+import { PhoneIcon, WhatsAppIcon, TikTokIcon, XIcon, InstagramIcon, ArrowIcon } from "./Icons";
 import { siteConfig, waLink } from "./SiteConfig";
 import { Orbs, GridOverlay } from "./Effects";
 
@@ -85,6 +85,21 @@ export function Contact() {
                 <div>
                   <p className="text-sm font-bold text-ink">X (Twitter)</p>
                   <p className="text-xs text-ink-soft">{siteConfig.twitter.handle}</p>
+                </div>
+                <ArrowIcon className="ml-auto h-4 w-4 text-ink-soft transition group-hover:translate-x-0.5 group-hover:text-purple-300" />
+              </a>
+              <a
+                href={siteConfig.instagram.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group glass flex items-center gap-3 !rounded-2xl !p-4 transition hover:-translate-y-0.5 hover:shadow-glow"
+              >
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-purple-600 to-purple-900 text-white">
+                  <InstagramIcon className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="text-sm font-bold text-ink">Instagram</p>
+                  <p className="text-xs text-ink-soft">{siteConfig.instagram.handle}</p>
                 </div>
                 <ArrowIcon className="ml-auto h-4 w-4 text-ink-soft transition group-hover:translate-x-0.5 group-hover:text-purple-300" />
               </a>
