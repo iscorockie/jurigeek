@@ -1,5 +1,5 @@
 import { BotIcon, ScaleIcon, GraduationIcon, ShieldIcon, CodeIcon } from "./Icons";
-import { Orbs, GridOverlay, CircuitLines, AiBadge } from "./Effects";
+import { Orbs, GridOverlay, CircuitLines } from "./Effects";
 
 const stats = [
   { value: "2500+", label: "Workflows automated" },

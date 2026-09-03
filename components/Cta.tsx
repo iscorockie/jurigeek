@@ -1,4 +1,4 @@
-import { ArrowIcon, PhoneIcon, WhatsAppIcon } from "./Icons";
+import { ArrowIcon, PhoneIcon } from "./Icons";
 import { Orbs, GridOverlay, CircuitLines } from "./Effects";
 import { siteConfig, waLink } from "./SiteConfig";
 
@@ -30,7 +30,7 @@ export function Cta() {
             rel="noopener noreferrer"
             className="btn-lime"
           >
-            Get started, it's free
+            Get started, it&apos;s free
             <ArrowIcon className="h-4 w-4" />
           </a>
           <a href={`tel:${siteConfig.phones[0].tel}`} className="btn-light">

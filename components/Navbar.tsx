@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { Logo } from "./Logo";
 import { siteConfig } from "./SiteConfig";
 
@@ -28,9 +29,9 @@ export function Navbar() {
           scrolled ? "h-[60px]" : "h-20"
         }`}
       >
-        <a href="/" aria-label="Jurigeek home" className="shrink-0">
+        <Link href="/" aria-label="Jurigeek home" className="shrink-0">
           <Logo className="h-8" color="#ffffff" />
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-9 md:flex">
           {siteConfig.nav.map((item) => (
