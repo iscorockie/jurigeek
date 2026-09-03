@@ -24,7 +24,7 @@ export function Contact() {
             <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {siteConfig.phones.map((p) => (
                 <div key={p.tel} className="rounded-2xl border border-cream-200 bg-cream-50 p-6">
-                  <span className="text-sm font-extrabold uppercase tracking-wide text-ink-soft">
+                  <span className="font-nexa text-sm font-extrabold tabular-nums uppercase tracking-wide text-ink-soft">
                     {p.label}
                   </span>
                   <div className="mt-4 flex flex-wrap gap-2">

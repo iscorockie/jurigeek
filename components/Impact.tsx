@@ -38,7 +38,7 @@ export function Impact() {
         <dl className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-3">
           {stats.map((s) => (
             <div key={s.value} className="text-center">
-              <dt className="text-4xl font-extrabold text-lime-400 sm:text-5xl">
+              <dt className="font-nexa text-4xl font-extrabold tabular-nums text-orange-400 sm:text-5xl">
                 {s.value}
               </dt>
               <dd className="mt-2 text-sm text-cream-100/70">{s.label}</dd>

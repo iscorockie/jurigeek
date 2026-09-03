@@ -5,38 +5,69 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // White / light surface (was "cream") — subtle lavender-white so white cards stay distinct
+        brand: {
+          50: "#ffffff",
+          100: "#faf9ff",
+          200: "#f1eefc",
+          300: "#e6e1f8",
+        },
+        // Purple (was "leaf") — dark feature bands, footer, primary dark buttons
+        purple: {
+          400: "#a78bfa",
+          500: "#8b5cf6",
+          600: "#7c3aed",
+          700: "#6d28d9",
+          800: "#5b21b6",
+          900: "#4c1d95",
+          950: "#2e1065",
+        },
+        // Orange (was "lime") — accent CTAs, prices, highlights
+        orange: {
+          100: "#ffedd5",
+          200: "#fed7aa",
+          300: "#fdba74",
+          400: "#fb923c",
+          500: "#f97316",
+          600: "#ea580c",
+        },
+        // Text (dark purple)
+        ink: {
+          DEFAULT: "#2e1065",
+          soft: "#5b537f",
+        },
+        // Backwards-compatible aliases so existing class names keep working
         cream: {
-          50: "#fcf9f3",
-          100: "#f7f1e6",
-          200: "#efe5d3",
-          300: "#e3d2b8",
+          50: "#ffffff",
+          100: "#faf9ff",
+          200: "#f1eefc",
+          300: "#e6e1f8",
         },
         leaf: {
-          400: "#3a7a4c",
-          700: "#1c4a2b",
-          800: "#143820",
-          900: "#0e2b18",
-          950: "#082013",
+          400: "#a78bfa",
+          500: "#8b5cf6",
+          700: "#6d28d9",
+          800: "#5b21b6",
+          900: "#4c1d95",
+          950: "#2e1065",
         },
         lime: {
-          200: "#f0ffad",
-          300: "#e8fb8a",
-          400: "#d7f64b",
-          500: "#c2ec26",
-          600: "#a6d514",
-        },
-        ink: {
-          DEFAULT: "#13231a",
-          soft: "#3a4a40",
+          100: "#ffedd5",
+          200: "#fed7aa",
+          300: "#fdba74",
+          400: "#fb923c",
+          500: "#f97316",
+          600: "#ea580c",
         },
       },
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
         display: ["Sora", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        nexa: ["Nexa", "Nexa Bold", "Nexa Light", "Nexa Book", "Sora", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        card: "0 24px 60px -24px rgba(20, 40, 28, 0.25)",
-        pill: "0 10px 30px -12px rgba(20, 56, 33, 0.35)",
+        card: "0 24px 60px -24px rgba(46, 16, 101, 0.18)",
+        pill: "0 10px 30px -12px rgba(46, 16, 101, 0.25)",
       },
       keyframes: {
         floaty: {

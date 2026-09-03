@@ -3,7 +3,7 @@ import { ArrowIcon } from "./Icons";
 export function About() {
   return (
     <section id="about" className="relative scroll-mt-20 bg-cream-50 py-24 sm:py-28">
-      <div className="grid-bg pointer-events-none absolute inset-0 opacity-[0.35]" style={{ backgroundImage: "radial-gradient(rgba(19,35,26,0.06) 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
+      <div className="grid-bg pointer-events-none absolute inset-0 opacity-[0.35]" style={{ backgroundImage: "radial-gradient(rgba(46,16,101,0.07) 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
       <div className="container-x relative">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
           <div>
@@ -33,7 +33,7 @@ export function About() {
                 <span className="chip !text-leaf-700">Live</span>
               </div>
               <div className="mt-6 flex items-end gap-2">
-                <span className="text-5xl font-extrabold text-ink">49%</span>
+                <span className="font-nexa text-5xl font-extrabold tabular-nums text-ink">49%</span>
                 <span className="mb-2 text-xs font-semibold text-ink-soft">of people miss legal help</span>
               </div>
               <div className="mt-4 h-3 w-full overflow-hidden rounded-full bg-cream-200">

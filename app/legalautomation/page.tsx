@@ -68,7 +68,7 @@ export default function LegalAutomationPage() {
           <div
             className="pointer-events-none absolute inset-0 -z-10"
             style={{
-              backgroundImage: "radial-gradient(rgba(19,35,26,0.05) 1px, transparent 1px)",
+              backgroundImage: "radial-gradient(rgba(46,16,101,0.06) 1px, transparent 1px)",
               backgroundSize: "28px 28px",
             }}
           />
@@ -210,7 +210,7 @@ export default function LegalAutomationPage() {
             <ol className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {steps.map((s) => (
                 <li key={s.n} className="card-light relative rounded-2xl p-7">
-                  <span className="text-3xl font-extrabold text-lime-500">{s.n}</span>
+                  <span className="font-nexa text-3xl font-extrabold tabular-nums text-orange-500">{s.n}</span>
                   <h3 className="mt-4 text-xl font-extrabold text-ink">{s.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.desc}</p>
                 </li>

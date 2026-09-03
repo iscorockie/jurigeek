@@ -10,7 +10,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="text-cream-100">
-              <Logo className="h-9" color="#f7f1e6" />
+              <Logo className="h-9" color="#ffffff" />
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed">
               Bridging access to justice through legal automation, technology law
@@ -57,7 +57,7 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm">
               {siteConfig.phones.map((p) => (
                 <li key={p.tel}>
-                  <a href={`tel:${p.tel}`} className="transition hover:text-cream-100">
+                  <a href={`tel:${p.tel}`} className="font-nexa tabular-nums transition hover:text-cream-100">
                     {p.label}
                   </a>
                 </li>

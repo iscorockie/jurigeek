@@ -20,7 +20,7 @@ export function Hero() {
       />
       {/* warm gradient overlays to keep text readable and blend to page bg */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-cream-100 via-cream-100/75 to-transparent" />
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(247,241,230,0.55),transparent_70%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(250,249,255,0.55),transparent_70%)]" />
 
       {/* floating chips */}
       {chips.map((c) => (
