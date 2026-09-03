@@ -3,25 +3,40 @@ import { Orbs, GridOverlay, CircuitLines } from "./Effects";
 
 export function About() {
   return (
-    <section id="about" className="relative scroll-mt-20 overflow-hidden bg-brand-50 py-24 sm:py-28">
+    <section id="about" className="relative scroll-mt-20 overflow-hidden bg-brand-50 py-16 sm:py-20">
       <GridOverlay />
       <Orbs />
       <CircuitLines />
       <div className="container-x relative">
-        <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
           <div>
             <span className="eyebrow">About Us</span>
             <h2 className="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl lg:text-5xl">
-              We build the systems that make legal work <span className="text-leaf-700">simpler and fairer</span>.
+              We build the systems that make legal work{" "}
+              <span className="gradient-text">simpler and fairer</span>.
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-ink-soft">
+            <p className="mt-5 text-lg leading-relaxed text-ink-soft">
               Thousands of people never access the legal help they are entitled to,
               and the institutions meant to serve them are stretched thin. Jurigeek
               exists to change that — automating the mechanics of legal work,
               advising on the tech laws shaping our lives, and teaching the people
               who will carry it forward.
             </p>
-            <a href="#services" className="mt-8 inline-flex items-center gap-2 text-base font-bold text-ink transition hover:text-leaf-700">
+
+            <div className="mt-6 grid grid-cols-3 gap-3">
+              {[
+                { icon: "⚖", label: "Access" },
+                { icon: "🧭", label: "Clarity" },
+                { icon: "🛡", label: "Integrity" },
+              ].map((m) => (
+                <div key={m.label} className="glass !rounded-xl !p-4 text-center">
+                  <div className="text-xl">{m.icon}</div>
+                  <div className="mt-1 text-sm font-bold text-ink">{m.label}</div>
+                </div>
+              ))}
+            </div>
+
+            <a href="#services" className="mt-6 inline-flex items-center gap-2 text-base font-bold text-ink transition hover:text-purple-700">
               Learn more
               <ArrowIcon className="h-4 w-4" />
             </a>

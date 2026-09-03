@@ -4,7 +4,7 @@ import { Orbs, GridOverlay } from "./Effects";
 
 export function Contact() {
   return (
-    <section id="contact" className="relative scroll-mt-20 overflow-hidden bg-brand-100 py-24 sm:py-28">
+    <section id="contact" className="relative scroll-mt-20 overflow-hidden bg-brand-100 py-16 sm:py-20">
       <GridOverlay />
       <Orbs />
       <div className="container-x relative">
@@ -19,7 +19,7 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
           {/* Phones */}
           <div className="glass-card p-8 lg:col-span-2">
             <h3 className="text-xl font-extrabold text-ink">Call or WhatsApp</h3>

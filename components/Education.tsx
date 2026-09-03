@@ -11,11 +11,11 @@ const outcomes = [
 
 export function Education() {
   return (
-    <section id="education" className="relative scroll-mt-20 overflow-hidden bg-brand-50 py-24 sm:py-28">
+    <section id="education" className="relative scroll-mt-20 overflow-hidden bg-brand-50 py-16 sm:py-20">
       <GridOverlay />
       <Orbs />
       <div className="container-x relative">
-        <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
           {/* image */}
           <div className="relative order-2 lg:order-1">
             <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-purple-500/25 via-transparent to-orange-400/25 blur-2xl" />

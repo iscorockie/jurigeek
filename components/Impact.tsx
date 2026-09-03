@@ -19,7 +19,7 @@ const marqueeItems = [
 export function Impact() {
   const loop = [...marqueeItems, ...marqueeItems];
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-purple-950 via-purple-900 to-purple-950 py-24 text-white sm:py-28">
+    <section className="relative overflow-hidden bg-gradient-to-br from-purple-950 via-purple-900 to-purple-950 py-16 text-white sm:py-20">
       <GridOverlay dark />
       <CircuitLines dark />
       <Orbs variant="dark" />
@@ -41,7 +41,7 @@ export function Impact() {
           </p>
         </div>
 
-        <dl className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-3">
+        <dl className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-3">
           {stats.map((s) => (
             <div key={s.value} className="glass-dark text-center">
               <dt className="font-nexa text-4xl font-extrabold tabular-nums text-orange-300 sm:text-5xl">
@@ -51,14 +51,10 @@ export function Impact() {
             </div>
           ))}
         </dl>
-
-        <div className="mt-10 flex justify-center">
-          <AiBadge label="Justice, automated by AI" />
-        </div>
       </div>
 
       {/* marquee strip */}
-      <div className="relative mt-16 border-y border-white/10 bg-white/[0.04] py-5 backdrop-blur">
+      <div className="relative mt-10 border-y border-white/10 bg-white/[0.04] py-4 backdrop-blur">
         <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
           <div className="flex w-max animate-marquee gap-4">
             {loop.map((item, i) => (

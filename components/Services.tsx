@@ -37,7 +37,7 @@ export const services = [
 
 export function Services() {
   return (
-    <section id="services" className="relative scroll-mt-20 overflow-hidden bg-brand-100 py-24 sm:py-28">
+    <section id="services" className="relative scroll-mt-20 overflow-hidden bg-brand-100 py-16 sm:py-20">
       <GridOverlay />
       <Orbs />
       <div className="container-x relative">
@@ -51,7 +51,7 @@ export function Services() {
           sub="From building the tools to advising on the law and teaching the next generation — everything sits at the intersection of law and technology."
         />
 
-        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
           {services.map((s) => (
             <article
               key={s.title}

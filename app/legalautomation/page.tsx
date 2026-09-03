@@ -73,7 +73,7 @@ export default function LegalAutomationPage() {
           <div className="pointer-events-none absolute -left-16 bottom-0 -z-10 h-80 w-80 rounded-full bg-orange-400/20 blur-[100px]" />
 
           <div className="container-x relative">
-            <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
+            <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
               <div>
                 <span className="eyebrow glass !rounded-full !px-4 !py-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-purple-600" />
@@ -133,12 +133,12 @@ export default function LegalAutomationPage() {
         </section>
 
         {/* Pain points */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-purple-950 via-purple-900 to-purple-950 py-20 text-white sm:py-24">
+        <section className="relative overflow-hidden bg-gradient-to-br from-purple-950 via-purple-900 to-purple-950 py-14 text-white sm:py-16">
           <GridOverlay dark />
           <CircuitLines dark />
           <Orbs variant="dark" />
           <div className="container-x relative">
-            <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+            <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
               <div>
                 <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-orange-300">
                   <span className="h-1.5 w-1.5 rounded-full bg-orange-400" />
@@ -168,7 +168,7 @@ export default function LegalAutomationPage() {
         </section>
 
         {/* Features */}
-        <section className="relative overflow-hidden bg-brand-100 py-24 sm:py-28">
+        <section className="relative overflow-hidden bg-brand-100 py-16 sm:py-20">
           <GridOverlay />
           <Orbs />
           <div className="container-x relative">
@@ -182,7 +182,7 @@ export default function LegalAutomationPage() {
               sub="We combine real legal process knowledge with reliable engineering — so the tools you get are practical, not theoretical."
             />
 
-            <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
               {features.map((f) => (
                 <article key={f.title} className="glass-card group flex flex-col !rounded-3xl transition hover:-translate-y-1.5 hover:shadow-glow">
                   <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-600 to-purple-900 text-white shadow-lg">
@@ -197,7 +197,7 @@ export default function LegalAutomationPage() {
         </section>
 
         {/* Process */}
-        <section className="relative overflow-hidden bg-brand-50 py-24 sm:py-28">
+        <section className="relative overflow-hidden bg-brand-50 py-16 sm:py-20">
           <GridOverlay />
           <Orbs />
           <div className="container-x relative">
@@ -210,7 +210,7 @@ export default function LegalAutomationPage() {
               }
               sub="A clear, collaborative process that turns a pain point into a tool your team actually uses."
             />
-            <ol className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <ol className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {steps.map((s) => (
                 <li key={s.n} className="glass-card relative !rounded-2xl !p-7 transition hover:-translate-y-1 hover:shadow-glow">
                   <span className="font-nexa gradient-text-orange text-3xl font-extrabold tabular-nums">{s.n}</span>
@@ -223,7 +223,7 @@ export default function LegalAutomationPage() {
         </section>
 
         {/* CTA */}
-        <section id="contact" className="relative overflow-hidden bg-gradient-to-br from-purple-950 via-purple-900 to-purple-950 py-20 text-white sm:py-24">
+        <section id="contact" className="relative overflow-hidden bg-gradient-to-br from-purple-950 via-purple-900 to-purple-950 py-14 text-white sm:py-16">
           <GridOverlay dark />
           <CircuitLines dark />
           <Orbs variant="dark" />
