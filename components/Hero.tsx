@@ -3,10 +3,10 @@ import { AiBadge } from "./Effects";
 import { siteConfig } from "./SiteConfig";
 
 const heroStats = [
-  { value: "95%", label: "Client satisfaction" },
-  { value: "12k+", label: "Docs automated" },
-  { value: "3", label: "Service pillars" },
-  { value: "$0", label: "First consult" },
+  { value: "2500+", label: "Workflows automated" },
+  { value: "12k+", label: "Documents drafted" },
+  { value: "36", label: "Jurisdictions reached" },
+  { value: "<24h", label: "Avg. response" },
 ];
 
 export function Hero() {

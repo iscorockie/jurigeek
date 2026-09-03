@@ -2,9 +2,10 @@ import { BotIcon, ScaleIcon, GraduationIcon, ShieldIcon, CodeIcon } from "./Icon
 import { Orbs, GridOverlay, CircuitLines, AiBadge } from "./Effects";
 
 const stats = [
-  { value: "95%", label: "Client satisfaction" },
-  { value: "3", label: "Service pillars" },
-  { value: "$0", label: "Barrier to a first consult" },
+  { value: "2500+", label: "Workflows automated" },
+  { value: "36", label: "Jurisdictions reached" },
+  { value: "12k+", label: "Documents drafted" },
+  { value: "<24h", label: "Avg. response time" },
 ];
 
 const marqueeItems = [
@@ -41,13 +42,13 @@ export function Impact() {
           </p>
         </div>
 
-        <dl className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-3">
+        <dl className="mx-auto mt-10 grid max-w-5xl grid-cols-2 gap-4 sm:grid-cols-4">
           {stats.map((s) => (
-            <div key={s.value} className="glass-dark text-center">
-              <dt className="font-nexa text-4xl font-extrabold tabular-nums text-orange-300 sm:text-5xl">
+            <div key={s.label} className="glass-dark rounded-2xl px-4 py-6 text-center">
+              <dt className="font-nexa text-3xl font-extrabold tabular-nums text-orange-300 sm:text-4xl">
                 {s.value}
               </dt>
-              <dd className="mt-2 text-sm text-white/70">{s.label}</dd>
+              <dd className="mt-2 text-xs font-semibold text-white/70 sm:text-sm">{s.label}</dd>
             </div>
           ))}
         </dl>

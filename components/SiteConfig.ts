@@ -16,8 +16,8 @@ export const siteConfig = {
   },
   nav: [
     { label: "Services", href: "/#services" },
+    { label: "Juri AI", href: "/#juri-ai" },
     { label: "About", href: "/#about" },
-    { label: "Education", href: "/#education" },
     { label: "Contact", href: "/#contact" },
   ],
 };
