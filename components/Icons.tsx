@@ -184,3 +184,11 @@ export function ChevronDownIcon(props: P) {
     </svg>
   );
 }
+
+export function StarIcon(props: P) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M12 2l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 19.9l1.1-6.5L2.6 8.8l6.5-.9L12 2z" />
+    </svg>
+  );
+}
