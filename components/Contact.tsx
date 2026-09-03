@@ -9,9 +9,9 @@ export function Contact() {
       <Orbs />
       <div className="container-x relative">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="eyebrow"><span className="h-1.5 w-1.5 rounded-full bg-leaf-700" />Contact</span>
+          <span className="eyebrow"><span className="h-1.5 w-1.5 rounded-full bg-orange-400" />Contact</span>
           <h2 className="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
-            Let&rsquo;s build the future of justice, <span className="text-leaf-700">together</span>.
+            Let&rsquo;s build the future of justice, <span className="gradient-text">together</span>.
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-ink-soft">
             Reach out to plan an engagement, ask a question or simply start a

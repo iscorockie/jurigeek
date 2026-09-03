@@ -41,7 +41,7 @@ export function Education() {
           <div className="order-1 lg:order-2">
             <span className="eyebrow">Tech law education</span>
             <h2 className="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl">
-              Learn where the law meets <span className="text-leaf-700">the machine</span>.
+              Learn where the law meets <span className="gradient-text">the machine</span>.
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-ink-soft">
               Our programs are built for working professionals and future leaders: practical, current and grounded in the realities of the Ugandan and
