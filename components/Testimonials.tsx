@@ -10,7 +10,7 @@ const testimonials = [
     avatar: "/testimonial-1.jpg",
   },
   {
-    quote: "Our intake and drafting used to take days. Now contracts assemble in minutes — and they're more reliable.",
+    quote: "Our intake and drafting used to take days. Now contracts assemble in minutes, and they're more reliable.",
     name: "Emeka A.",
     role: "Property Owner, Entebbe",
     avatar: "/testimonial-2.jpg",
@@ -42,7 +42,7 @@ export function Testimonials() {
               Trusted by people <span className="gradient-text">across Africa</span>
             </>
           }
-          sub="From law firms to founders, students to organisations — hear from the people we work with."
+          sub="From law firms to founders, students to organisations: hear from the people we work with."
         />
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

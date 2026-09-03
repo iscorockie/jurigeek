@@ -5,7 +5,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Dark futuristic surfaces (was light "brand" lavender) — used as section/page backgrounds
+        // Dark futuristic surfaces (was light "brand" lavender), used as section/page backgrounds
         brand: {
           50: "#06030d",
           100: "#0b0716",
@@ -13,7 +13,7 @@ const config: Config = {
           300: "#1c1332",
           400: "#271b45",
         },
-        // Purple — primary brand accent + dark feature bands
+        // Purple, primary brand accent + dark feature bands
         purple: {
           300: "#c4b5fd",
           400: "#a78bfa",
@@ -24,7 +24,7 @@ const config: Config = {
           900: "#4c1d95",
           950: "#2e1065",
         },
-        // Orange — accent CTAs, prices, highlights
+        // Orange, accent CTAs, prices, highlights
         orange: {
           100: "#ffedd5",
           200: "#fed7aa",
@@ -33,7 +33,7 @@ const config: Config = {
           500: "#f97316",
           600: "#ea580c",
         },
-        // Text (light on dark) — was dark purple ink
+        // Text (light on dark), was dark purple ink
         ink: {
           DEFAULT: "#f4f1ff",
           soft: "#b3a7d6",

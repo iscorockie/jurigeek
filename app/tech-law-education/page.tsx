@@ -15,12 +15,12 @@ import { CtaButtons } from "@/components/CtaButtons";
 export const metadata: Metadata = {
   title: "Tech Law Education",
   description:
-    "Courses, workshops and training where law and technology meet — building the next generation of legal minds for the digital economy.",
+    "Courses, workshops and training where law and technology meet, building the next generation of legal minds for the digital economy.",
   alternates: { canonical: "https://jurigeek.org/tech-law-education" },
   openGraph: {
     title: "Tech Law Education · Jurigeek",
     description:
-      "Learn where the law meets the machine — training, workshops and accessible learning built for the real world.",
+      "Learn where the law meets the machine: training, workshops and accessible learning built for the real world.",
     url: "https://jurigeek.org/tech-law-education",
   },
 };
@@ -46,14 +46,14 @@ const programs = [
   {
     icon: UsersIcon,
     title: "Public legal education",
-    desc: "Accessible learning for the public — so more people understand their rights in a digital world.",
+    desc: "Accessible learning for the public, so more people understand their rights in a digital world.",
   },
 ];
 
 const steps = [
   { n: "01", title: "Learn", desc: "Master the fundamentals of the law-technology intersection in small, practical sessions." },
   { n: "02", title: "Apply", desc: "Work through real scenarios and build the confidence to apply what you've learned." },
-  { n: "03", title: "Build", desc: "Turn knowledge into capability — apply tech law thinking to your work or practice." },
+  { n: "03", title: "Build", desc: "Turn knowledge into capability: apply tech law thinking to your work or practice." },
   { n: "04", title: "Grow", desc: "Keep learning as the digital legal landscape evolves with ongoing sessions." },
 ];
 
@@ -82,7 +82,7 @@ export default function TechLawEducationPage() {
                 </h1>
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
                   Courses, workshops and training built for working professionals,
-                  students and future leaders — practical, current and grounded in
+                  students and future leaders: practical, current and grounded in
                   the realities of the Ugandan and African legal markets.
                 </p>
 
@@ -163,7 +163,7 @@ export default function TechLawEducationPage() {
                   Programs built for <span className="gradient-text">the real world</span>
                 </>
               }
-              sub="From lawyers and students to teams and the public — practical learning that translates directly into capability."
+              sub="From lawyers and students to teams and the public: practical learning that translates directly into capability."
             />
 
             <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">

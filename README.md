@@ -32,14 +32,14 @@ npm run start
 
 The project is already configured for Vercel (`vercel.json`, `next.config.mjs`).
 
-### Option A — via the Vercel dashboard (recommended)
+### Option A: via the Vercel dashboard (recommended)
 
 1. Push this repository to GitHub (see below).
 2. Go to [vercel.com/new](https://vercel.com/new) and select the `iscorockie/jurigeek` repository.
 3. Vercel auto-detects Next.js; leave the defaults and click **Deploy**.
 4. After deploy, go to **Settings → Domains** and add the `jurigeek.org` custom domain. Vercel will guide you through adding the required DNS records (A / CNAME / TXT) at your domain registrar.
 
-### Option B — via the Vercel CLI
+### Option B: via the Vercel CLI
 
 ```bash
 npm i -g vercel
@@ -53,11 +53,11 @@ vercel domains add jurigeek.org
 
 Key site content lives in:
 
-- `components/SiteConfig.ts` — business details, phone numbers, social links, navigation.
-- `components/Services.tsx` — the three service pillars.
-- `components/About.tsx` — mission and values.
-- `components/Contact.tsx` — contact channels (call, WhatsApp, TikTok, X).
-- `app/layout.tsx` — site metadata, SEO, Open Graph.
+- `components/SiteConfig.ts`: business details, phone numbers, social links, navigation.
+- `components/Services.tsx`: the three service pillars.
+- `components/About.tsx`: mission and values.
+- `components/Contact.tsx`: contact channels (call, WhatsApp, TikTok, X).
+- `app/layout.tsx`: site metadata, SEO, Open Graph.
 
 ## Business contacts
 

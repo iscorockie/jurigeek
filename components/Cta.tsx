@@ -16,7 +16,7 @@ export function Cta() {
           Get started
         </span>
         <h2 className="mx-auto mt-5 max-w-2xl text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-          Justice, made accessible — <span className="gradient-text">for everyone</span>.
+          Justice, made accessible <span className="gradient-text">for everyone</span>.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-lg text-white/70">
           Connect with Jurigeek, power your practice with automation, get
@@ -30,7 +30,7 @@ export function Cta() {
             rel="noopener noreferrer"
             className="btn-lime"
           >
-            Get started — it's free
+            Get started, it's free
             <ArrowIcon className="h-4 w-4" />
           </a>
           <a href={`tel:${siteConfig.phones[0].tel}`} className="btn-light">

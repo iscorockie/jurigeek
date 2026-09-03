@@ -15,7 +15,7 @@ import { CtaButtons } from "@/components/CtaButtons";
 export const metadata: Metadata = {
   title: "Technology Law Consultancy",
   description:
-    "Practical, current legal advisory for the digital economy — data protection, regulatory & compliance advisory and digital contracts & policy for innovators, founders and organisations.",
+    "Practical, current legal advisory for the digital economy: data protection, regulatory & compliance advisory and digital contracts & policy for innovators, founders and organisations.",
   alternates: { canonical: "https://jurigeek.org/techlaw-consultancy" },
   openGraph: {
     title: "Technology Law Consultancy · Jurigeek",
@@ -36,7 +36,7 @@ const services = [
   {
     icon: ShieldIcon,
     title: "Data protection & privacy",
-    desc: "Advice on data collection, processing, retention and user rights — so you handle personal data lawfully and build trust.",
+    desc: "Advice on data collection, processing, retention and user rights, so you handle personal data lawfully and build trust.",
   },
   {
     icon: ScaleIcon,
@@ -52,7 +52,7 @@ const services = [
 
 const steps = [
   { n: "01", title: "Assess", desc: "We map your product, data flows and current exposure to understand where the real risk sits." },
-  { n: "02", title: "Advise", desc: "We give clear, actionable guidance on the rules that matter for your context — not generic templates." },
+  { n: "02", title: "Advise", desc: "We give clear, actionable guidance on the rules that matter for your context, not generic templates." },
   { n: "03", title: "Draft", desc: "We prepare the contracts, policies and safeguards your business needs to operate confidently." },
   { n: "04", title: "Support", desc: "We stay on call as your product and the regulatory landscape evolve." },
 ];
@@ -83,7 +83,7 @@ export default function TechLawConsultancyPage() {
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
                   Practical, current legal advisory that helps innovators, founders
                   and organisations manage data protection, compliance and
-                  technology risk — without slowing you down.
+                  technology risk, without slowing you down.
                 </p>
 
                 <div className="mt-6">
@@ -220,7 +220,7 @@ export default function TechLawConsultancyPage() {
               Have a technology law question?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-white/70">
-              Tell us about your product, your data or your risk — we&rsquo;ll show
+              Tell us about your product, your data or your risk, and we&rsquo;ll show
               you what good looks like.
             </p>
             <div className="mt-9 flex justify-center">

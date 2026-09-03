@@ -23,7 +23,7 @@ export function Contact() {
           {/* Phones */}
           <div className="glass-card p-8 lg:col-span-2">
             <h3 className="text-xl font-extrabold text-ink">Call or WhatsApp</h3>
-            <p className="mt-1 text-sm text-ink-soft">Mon–Fri · Kampala, Uganda (EAT)</p>
+            <p className="mt-1 text-sm text-ink-soft">Monday to Friday · Kampala, Uganda (EAT)</p>
             <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {siteConfig.phones.map((p) => (
                 <div key={p.tel} className="glass !rounded-2xl !p-6">

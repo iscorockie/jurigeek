@@ -31,7 +31,7 @@ export function JuriAI() {
             </h2>
             <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/70">
               AI-powered research, smart drafting, compliance checks and case
-              coordination — in seconds. Built to automate the mechanics of legal
+              coordination in seconds. Built to automate the mechanics of legal
               work, so people get to justice faster.
             </p>
 

@@ -8,7 +8,7 @@ const audiences = [
     icon: UsersIcon,
     title: "For Law Firms",
     tag: "Automate your practice",
-    desc: "Turn repetitive drafting, intake and workflows into fast, reliable systems — so your team focuses on judgment, not busy work.",
+    desc: "Turn repetitive drafting, intake and workflows into fast, reliable systems, so your team focuses on judgment, not busy work.",
     href: "/legalautomation",
     tint: "from-purple-500 to-purple-700",
   },
@@ -17,7 +17,7 @@ const audiences = [
     icon: BoltIcon,
     title: "For Founders & Startups",
     tag: "Navigate tech law",
-    desc: "Get practical advisory on data protection, compliance and digital contracts — clear guidance for builders and innovators.",
+    desc: "Get practical advisory on data protection, compliance and digital contracts: clear guidance for builders and innovators.",
     href: "/techlaw-consultancy",
     tint: "from-orange-400 to-orange-600",
   },
@@ -35,7 +35,7 @@ const audiences = [
     icon: BuildingIcon,
     title: "For Organizations",
     tag: "Build legal capacity",
-    desc: "Hire and manage legal talent, automate operations and stay compliant — one platform for your legal function.",
+    desc: "Hire and manage legal talent, automate operations and stay compliant: one platform for your legal function.",
     href: "/#contact",
     tint: "from-purple-800 to-purple-950",
   },
@@ -54,7 +54,7 @@ export function Audience() {
               A platform for <span className="gradient-text">every legal need</span>
             </>
           }
-          sub="Seamless access to the legal help you need — whether you practice, build, learn or hire."
+          sub="Seamless access to the legal help you need, whether you practice, build, learn or hire."
         />
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

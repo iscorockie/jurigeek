@@ -12,19 +12,19 @@ const faqs = [
   },
   {
     q: "Can you automate our existing documents and workflows?",
-    a: "Yes. We map your current process, then build automation around it — from contract assembly and drafting to client intake and matter pipelines. The tools are tailored to how you actually work, not a generic template.",
+    a: "Yes. We map your current process, then build automation around it, from contract assembly and drafting to client intake and matter pipelines. The tools are tailored to how you actually work, not a generic template.",
   },
   {
     q: "Who is technology law consultancy for?",
-    a: "Founders, start-ups and organisations operating in the digital economy. We help you navigate data protection, regulatory compliance, digital contracts and technology risk — in plain, practical terms.",
+    a: "Founders, start-ups and organisations operating in the digital economy. We help you navigate data protection, regulatory compliance, digital contracts and technology risk, in plain, practical terms.",
   },
   {
     q: "Is technology law education available online?",
-    a: "Yes. Our programs are built for working professionals and students across Africa — practical, current and grounded in the realities of the Ugandan and African legal markets.",
+    a: "Yes. Our programs are built for working professionals and students across Africa: practical, current and grounded in the realities of the Ugandan and African legal markets.",
   },
   {
     q: "How do we get started?",
-    a: "Reach out on WhatsApp or give us a call. We'll talk through your challenge and point you in the right direction — whether that's automation, advisory or education.",
+    a: "Reach out on WhatsApp or give us a call. We'll talk through your challenge and point you in the right direction, whether that's automation, advisory or education.",
   },
 ];
 

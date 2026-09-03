@@ -28,7 +28,7 @@ export function Navbar() {
           <Logo className="h-8" color="#ffffff" />
         </a>
 
-        <div className="hidden items-center gap-9 lg:flex">
+        <div className="hidden items-center gap-9 md:flex">
           {siteConfig.nav.map((item) => (
             <a
               key={item.href}
@@ -41,15 +41,24 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
-          <a href="#contact" className="hidden rounded-full bg-gradient-to-r from-purple-900 to-purple-950 px-6 py-3 text-sm font-bold text-white shadow-[0_10px_30px_-12px_rgba(88,28,135,0.8)] transition hover:from-purple-800 hover:to-purple-900 sm:inline-flex">
-            Get in touch
+          <a
+            href="#contact"
+            className="hidden text-sm font-semibold text-ink-soft transition hover:text-ink md:inline-flex"
+          >
+            Sign In
+          </a>
+          <a
+            href="#contact"
+            className="hidden rounded-full bg-gradient-to-r from-orange-400 to-orange-500 px-6 py-3 text-sm font-bold text-purple-950 shadow-[0_10px_30px_-12px_rgba(249,115,22,0.8)] transition hover:from-orange-300 hover:to-orange-400 md:inline-flex"
+          >
+            Get Started
           </a>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
             aria-expanded={open}
-            className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.06] p-2.5 text-ink backdrop-blur lg:hidden"
+            className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.06] p-2.5 text-ink backdrop-blur md:hidden"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               {open ? (
@@ -63,7 +72,7 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-leaf-900/10 bg-cream-50/95 backdrop-blur-xl lg:hidden">
+        <div className="border-t border-white/10 bg-brand-100/95 backdrop-blur-xl md:hidden">
           <div className="container-x flex flex-col gap-1 py-4">
             {siteConfig.nav.map((item) => (
               <a
@@ -78,9 +87,9 @@ export function Navbar() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-gradient-to-r from-purple-900 to-purple-950 px-6 py-3 text-center text-sm font-bold text-white"
+              className="mt-2 rounded-full bg-gradient-to-r from-orange-400 to-orange-500 px-6 py-3 text-center text-sm font-bold text-purple-950"
             >
-              Get in touch
+              Get Started
             </a>
           </div>
         </div>

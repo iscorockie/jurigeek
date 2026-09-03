@@ -26,7 +26,7 @@ export function About() {
             <p className="mt-5 text-lg leading-relaxed text-ink-soft">
               Thousands of people never access the legal help they are entitled to,
               and the institutions meant to serve them are stretched thin. Jurigeek
-              exists to change that — automating the mechanics of legal work,
+              exists to change that: automating the mechanics of legal work,
               advising on the tech laws shaping our lives, and teaching the people
               who will carry it forward.
             </p>
@@ -52,7 +52,7 @@ export function About() {
             </a>
           </div>
 
-          {/* stats widget card — glass */}
+          {/* stats widget card (glass) */}
           <div className="relative mx-auto w-full max-w-sm">
             <div className="absolute -inset-5 -z-10 rounded-[2.5rem] bg-gradient-to-br from-purple-500/30 via-transparent to-orange-400/30 blur-2xl" />
             <div className="glass-card overflow-hidden !rounded-3xl !p-6">
@@ -89,7 +89,7 @@ export function About() {
               </div>
             </div>
 
-            {/* team photo — stock */}
+            {/* team photo (stock) */}
             <img
               src="/about-team.jpg"
               alt="A legal professional working at a desk with scales of justice"

@@ -44,8 +44,7 @@ export function Education() {
               Learn where the law meets <span className="text-leaf-700">the machine</span>.
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-              Our programs are built for working professionals and future leaders —
-              practical, current and grounded in the realities of the Ugandan and
+              Our programs are built for working professionals and future leaders: practical, current and grounded in the realities of the Ugandan and
               African legal markets.
             </p>
 

@@ -19,10 +19,8 @@ export const siteConfig = {
     url: "https://www.instagram.com/juri_geek?utm_source=qr",
   },
   nav: [
-    { label: "Services", href: "/#services" },
-    { label: "Juri AI", href: "/#juri-ai" },
+    { label: "How It Works", href: "/#services" },
     { label: "About", href: "/#about" },
-    { label: "Contact", href: "/#contact" },
   ],
 };
 

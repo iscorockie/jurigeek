@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://jurigeek.org"),
   title: {
-    default: "Jurigeek — Justice, automated",
+    default: "Jurigeek | Justice, automated",
     template: "%s · Jurigeek",
   },
   description:
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://jurigeek.org",
     siteName: "Jurigeek",
-    title: "Jurigeek — Justice, automated",
+    title: "Jurigeek | Justice, automated",
     description:
       "Bridging access to justice through legal automation, technology law consultancy and tech law education.",
     images: [
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
         url: "/og-dark.jpg",
         width: 1200,
         height: 630,
-        alt: "Jurigeek — Bridging access to justice through legal automation",
+        alt: "Jurigeek | Bridging access to justice through legal automation",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jurigeek — Justice, automated",
+    title: "Jurigeek | Justice, automated",
     description:
       "Bridging access to justice through legal automation, technology law consultancy and tech law education.",
     site: "@hakeemcounsel",

@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 
 /**
- * The official Jurigeek brand lockup — scales-of-justice emblem + "JURIGEEK" wordmark.
+ * The official Jurigeek brand lockup, scales-of-justice emblem + "JURIGEEK" wordmark.
  * The source asset is monochrome SVG-equivalent (PNG) on transparency, so we render
  * it as a CSS mask and paint it with `color` to adapt to light/dark contexts.
  */

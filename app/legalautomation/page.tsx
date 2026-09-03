@@ -9,12 +9,12 @@ import { CtaButtons } from "@/components/CtaButtons";
 export const metadata: Metadata = {
   title: "Legal Automation",
   description:
-    "Jurigeek designs and builds tools that turn repetitive legal work into fast, reliable systems — from document drafting and contract assembly to client intake and workflows.",
+    "Jurigeek designs and builds tools that turn repetitive legal work into fast, reliable systems, from document drafting and contract assembly to client intake and workflows.",
   alternates: { canonical: "https://jurigeek.org/legalautomation" },
   openGraph: {
     title: "Legal Automation · Jurigeek",
     description:
-      "Turn repetitive legal work into fast, reliable systems — document drafting, contract assembly, client intake and workflows.",
+      "Turn repetitive legal work into fast, reliable systems: document drafting, contract assembly, client intake and workflows.",
     url: "https://jurigeek.org/legalautomation",
   },
 };
@@ -30,7 +30,7 @@ const features = [
   {
     icon: CodeIcon,
     title: "Document & contract automation",
-    desc: "Intelligent templates that draft, assemble and populate contracts in seconds — not hours.",
+    desc: "Intelligent templates that draft, assemble and populate contracts in seconds, not hours.",
   },
   {
     icon: BotIcon,
@@ -77,7 +77,7 @@ export default function LegalAutomationPage() {
                 </h1>
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
                   From drafting and contract assembly to client intake and
-                  workflows — we design and build tools that do the busy work, so
+                  workflows. We design and build tools that do the busy work, so
                   your team can focus on the judgment that matters.
                 </p>
 
@@ -130,7 +130,7 @@ export default function LegalAutomationPage() {
                 <p className="mt-5 text-lg leading-relaxed text-white/70">
                   Manual, repetitive legal tasks slow firms down, introduce errors
                   and keep people from the help they need. Automation reclaims that
-                  time — and makes the output more reliable.
+                  time, and makes the output more reliable.
                 </p>
               </div>
               <ul className="grid grid-cols-1 gap-4">
@@ -159,7 +159,7 @@ export default function LegalAutomationPage() {
                   Automation that fits <span className="gradient-text">how you work</span>
                 </>
               }
-              sub="We combine real legal process knowledge with reliable engineering — so the tools you get are practical, not theoretical."
+              sub="We combine real legal process knowledge with reliable engineering, so the tools you get are practical, not theoretical."
             />
 
             <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -212,7 +212,7 @@ export default function LegalAutomationPage() {
               Ready to put your repetitive legal work on autopilot?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-white/70">
-              Tell us about the process you want to streamline — we&rsquo;ll show
+              Tell us about the process you want to streamline, and we&rsquo;ll show
               you what&rsquo;s possible.
             </p>
             <div className="mt-9 flex justify-center">

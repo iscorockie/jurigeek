@@ -8,7 +8,7 @@ export const services = [
     icon: BotIcon,
     tag: "Legal Automation",
     title: "Legal automation",
-    desc: "We design and build tools that turn repetitive legal work into fast, reliable systems — from drafting and contract assembly to client intake and workflows.",
+    desc: "We design and build tools that turn repetitive legal work into fast, reliable systems, from drafting and contract assembly to client intake and workflows.",
     points: ["Document & contract automation", "Workflow & intake systems", "Process design for law firms"],
     tint: "bg-gradient-to-br from-purple-500 to-purple-700 text-white",
     glow: "group-hover:shadow-glow",
@@ -18,7 +18,7 @@ export const services = [
     icon: ShieldIcon,
     tag: "Technology Law Consultancy",
     title: "Technology law consultancy",
-    desc: "Practical, current legal advisory for a digital economy — helping innovators, founders and organisations navigate data protection and technology risk.",
+    desc: "Practical, current legal advisory for a digital economy: helping innovators, founders and organisations navigate data protection and technology risk.",
     points: ["Data protection & privacy", "Regulatory & compliance advisory", "Digital contracts & policy"],
     tint: "bg-gradient-to-br from-orange-400 to-orange-600 text-white",
     glow: "group-hover:shadow-glow-orange",
@@ -28,7 +28,7 @@ export const services = [
     icon: GraduationIcon,
     tag: "Tech Law Education",
     title: "Tech law education",
-    desc: "We teach lawyers, students and professionals where law and technology meet — through training, workshops and accessible learning for the real world.",
+    desc: "We teach lawyers, students and professionals where law and technology meet, through training, workshops and accessible learning for the real world.",
     points: ["Courses & workshops", "Legal-tech training", "Public legal education"],
     tint: "bg-gradient-to-br from-purple-800 to-purple-950 text-orange-300",
     glow: "group-hover:shadow-glow",
@@ -48,7 +48,7 @@ export function Services() {
               Three ways we move justice <span className="gradient-text">forward</span>
             </>
           }
-          sub="From building the tools to advising on the law and teaching the next generation — everything sits at the intersection of law and technology."
+          sub="From building the tools to advising on the law and teaching the next generation: everything sits at the intersection of law and technology."
         />
 
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">

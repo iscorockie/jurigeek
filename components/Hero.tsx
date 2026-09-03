@@ -40,11 +40,11 @@ export function Hero() {
 
           <h1 className="mt-6 text-4xl font-extrabold leading-[1.03] tracking-tight text-ink sm:text-5xl xl:text-[3.7rem] xl:leading-[1.04]">
             Justice,{" "}
-            <span className="gradient-text">automated</span> — for everyone.
+            <span className="gradient-text">automated</span> for everyone.
           </h1>
 
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-soft">
-            Jurigeek turns repetitive legal work into fast, reliable systems —
+            Jurigeek turns repetitive legal work into fast, reliable systems,
             so access to justice is no longer gated by cost, distance or
             complexity.
           </p>

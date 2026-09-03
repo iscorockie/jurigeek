@@ -16,7 +16,7 @@ export function Footer() {
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed">
               Bridging access to justice through legal automation, technology law
-              consultancy and tech law education — for people, organisations and
+              consultancy and tech law education: for people, organisations and
               the next generation of legal minds.
             </p>
             <div className="mt-6 flex gap-3">
