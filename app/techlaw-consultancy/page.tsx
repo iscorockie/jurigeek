@@ -7,13 +7,10 @@ import {
   ScaleIcon,
   SearchIcon,
   LayersIcon,
-  ArrowIcon,
   CheckIcon,
-  PhoneIcon,
-  WhatsAppIcon,
 } from "@/components/Icons";
-import { siteConfig, waLink } from "@/components/SiteConfig";
 import { Orbs, GridOverlay, CircuitLines, AiBadge } from "@/components/Effects";
+import { CtaButtons } from "@/components/CtaButtons";
 
 export const metadata: Metadata = {
   title: "Technology Law Consultancy",
@@ -93,20 +90,8 @@ export default function TechLawConsultancyPage() {
                   <AiBadge label="Regulatory-grade advisory" />
                 </div>
 
-                <div className="mt-9 flex flex-wrap items-center gap-4">
-                  <a href="#contact" className="btn-lime">
-                    Start a conversation
-                    <ArrowIcon className="h-4 w-4" />
-                  </a>
-                  <a
-                    href={waLink(siteConfig.phones[0].wa, "Hello Jurigeek, I'd like to talk about Technology Law Consultancy.")}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-dark"
-                  >
-                    <WhatsAppIcon className="h-4 w-4" />
-                    WhatsApp us
-                  </a>
+                <div className="mt-9">
+                  <CtaButtons message="Hello Jurigeek, I'd like to talk about Technology Law Consultancy." />
                 </div>
               </div>
 
@@ -238,20 +223,8 @@ export default function TechLawConsultancyPage() {
               Tell us about your product, your data or your risk — we&rsquo;ll show
               you what good looks like.
             </p>
-            <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
-              <a
-                href={waLink(siteConfig.phones[0].wa, "Hello Jurigeek, I'd like to start a Technology Law Consultancy conversation.")}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-lime"
-              >
-                Start a conversation
-                <ArrowIcon className="h-4 w-4" />
-              </a>
-              <a href={`tel:${siteConfig.phones[0].tel}`} className="btn-light">
-                <PhoneIcon className="h-4 w-4" />
-                {siteConfig.phones[0].label}
-              </a>
+            <div className="mt-9 flex justify-center">
+              <CtaButtons message="Hello Jurigeek, I'd like to start a Technology Law Consultancy conversation." />
             </div>
           </div>
         </section>

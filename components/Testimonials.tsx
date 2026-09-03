@@ -7,29 +7,25 @@ const testimonials = [
     quote: "Within a day, Jurigeek mapped our entire contract workflow and automated it. Clear pricing, zero hassle.",
     name: "Chidera O.",
     role: "Small Business Owner, Kampala",
-    initials: "CO",
-    tint: "from-purple-500 to-purple-700",
+    avatar: "/testimonial-1.jpg",
   },
   {
     quote: "Our intake and drafting used to take days. Now contracts assemble in minutes — and they're more reliable.",
     name: "Emeka A.",
     role: "Property Owner, Entebbe",
-    initials: "EA",
-    tint: "from-orange-400 to-orange-600",
+    avatar: "/testimonial-2.jpg",
   },
   {
     quote: "Technology law advisory that actually makes sense. We navigated data protection and compliance with confidence.",
     name: "Verified Founder",
     role: "Technology Start-up, Nairobi",
-    initials: "VF",
-    tint: "from-purple-700 to-purple-950",
+    avatar: "/testimonial-3.jpg",
   },
   {
     quote: "The tech law education is practical and current. It's the exposure I couldn't get anywhere else.",
     name: "Final Year LLB Student",
     role: "Makerere University",
-    initials: "FS",
-    tint: "from-purple-800 to-purple-950",
+    avatar: "/testimonial-4.jpg",
   },
 ];
 
@@ -57,9 +53,12 @@ export function Testimonials() {
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
               <figcaption className="mt-auto flex items-center gap-3 pt-5">
-                <span className={`flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br ${t.tint} text-sm font-bold text-white`}>
-                  {t.initials}
-                </span>
+                <img
+                  src={t.avatar}
+                  alt={t.name}
+                  loading="lazy"
+                  className="h-11 w-11 rounded-full border-2 border-purple-400/40 object-cover shadow-glow-soft"
+                />
                 <div>
                   <p className="text-sm font-extrabold text-ink">{t.name}</p>
                   <p className="text-xs text-ink-soft">{t.role}</p>

@@ -1,4 +1,12 @@
-import { ArrowIcon } from "./Icons";
+import {
+  ArrowIcon,
+  ScaleIcon,
+  SparklesIcon,
+  ShieldIcon,
+  BoltIcon,
+  SearchIcon,
+  GraduationIcon,
+} from "./Icons";
 import { Orbs, GridOverlay, CircuitLines } from "./Effects";
 
 export function About() {
@@ -25,13 +33,15 @@ export function About() {
 
             <div className="mt-6 grid grid-cols-3 gap-3">
               {[
-                { icon: "⚖", label: "Access" },
-                { icon: "🧭", label: "Clarity" },
-                { icon: "🛡", label: "Integrity" },
+                { icon: ScaleIcon, label: "Access", tint: "text-purple-300" },
+                { icon: SparklesIcon, label: "Clarity", tint: "text-orange-400" },
+                { icon: ShieldIcon, label: "Integrity", tint: "text-purple-300" },
               ].map((m) => (
                 <div key={m.label} className="glass !rounded-xl !p-4 text-center">
-                  <div className="text-xl">{m.icon}</div>
-                  <div className="mt-1 text-sm font-bold text-ink">{m.label}</div>
+                  <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500/25 to-purple-900/25">
+                    <m.icon className={`h-5 w-5 ${m.tint}`} />
+                  </div>
+                  <div className="mt-2 text-sm font-bold text-ink">{m.label}</div>
                 </div>
               ))}
             </div>
@@ -66,18 +76,26 @@ export function About() {
 
               <div className="mt-6 grid grid-cols-2 gap-3">
                 {[
-                  { icon: "⚖", label: "Automate" },
-                  { icon: "🗂", label: "Advise" },
-                  { icon: "🧠", label: "Educate" },
-                  { icon: "🛡", label: "Compliance" },
+                  { icon: BoltIcon, label: "Automate", tint: "text-orange-400" },
+                  { icon: SearchIcon, label: "Advise", tint: "text-purple-300" },
+                  { icon: GraduationIcon, label: "Educate", tint: "text-purple-300" },
+                  { icon: ShieldIcon, label: "Compliance", tint: "text-orange-400" },
                 ].map((m) => (
                   <div key={m.label} className="rounded-xl border border-white/[0.12] bg-white/[0.05] px-4 py-3 text-center backdrop-blur">
-                    <div className="text-lg">{m.icon}</div>
-                    <div className="mt-1 text-xs font-bold text-ink">{m.label}</div>
+                    <m.icon className={`mx-auto h-5 w-5 ${m.tint}`} />
+                    <div className="mt-1.5 text-xs font-bold text-ink">{m.label}</div>
                   </div>
                 ))}
               </div>
             </div>
+
+            {/* team photo — stock */}
+            <img
+              src="/about-team.jpg"
+              alt="A legal professional working at a desk with scales of justice"
+              loading="lazy"
+              className="mt-4 w-full rounded-2xl border border-white/[0.12] object-cover shadow-card"
+            />
           </div>
         </div>
       </div>

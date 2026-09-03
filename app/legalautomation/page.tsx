@@ -2,17 +2,9 @@ import type { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SectionHeading } from "@/components/SectionHeading";
-import {
-  BotIcon,
-  ScaleIcon,
-  CodeIcon,
-  ArrowIcon,
-  CheckIcon,
-  PhoneIcon,
-  WhatsAppIcon,
-} from "@/components/Icons";
-import { siteConfig, waLink } from "@/components/SiteConfig";
+import { BotIcon, ScaleIcon, CodeIcon, CheckIcon } from "@/components/Icons";
 import { Orbs, GridOverlay, CircuitLines, AiBadge } from "@/components/Effects";
+import { CtaButtons } from "@/components/CtaButtons";
 
 export const metadata: Metadata = {
   title: "Legal Automation",
@@ -93,20 +85,8 @@ export default function LegalAutomationPage() {
                   <AiBadge label="AI-assisted workflow engine" />
                 </div>
 
-                <div className="mt-9 flex flex-wrap items-center gap-4">
-                  <a href="#contact" className="btn-lime">
-                    Start a conversation
-                    <ArrowIcon className="h-4 w-4" />
-                  </a>
-                  <a
-                    href={waLink(siteConfig.phones[0].wa, "Hello Jurigeek, I'd like to learn more about Legal Automation.")}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-dark"
-                  >
-                    <WhatsAppIcon className="h-4 w-4" />
-                    WhatsApp us
-                  </a>
+                <div className="mt-9">
+                  <CtaButtons message="Hello Jurigeek, I'd like to learn more about Legal Automation." />
                 </div>
               </div>
 
@@ -235,20 +215,8 @@ export default function LegalAutomationPage() {
               Tell us about the process you want to streamline — we&rsquo;ll show
               you what&rsquo;s possible.
             </p>
-            <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
-              <a
-                href={waLink(siteConfig.phones[0].wa, "Hello Jurigeek, I'd like to start a Legal Automation conversation.")}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-lime"
-              >
-                Start a conversation
-                <ArrowIcon className="h-4 w-4" />
-              </a>
-              <a href={`tel:${siteConfig.phones[0].tel}`} className="btn-light">
-                <PhoneIcon className="h-4 w-4" />
-                {siteConfig.phones[0].label}
-              </a>
+            <div className="mt-9 flex justify-center">
+              <CtaButtons message="Hello Jurigeek, I'd like to start a Legal Automation conversation." />
             </div>
           </div>
         </section>

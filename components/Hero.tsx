@@ -63,14 +63,14 @@ export function Hero() {
           {/* social proof */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
             <div className="flex -space-x-2.5">
-              {["#8b5cf6", "#fb923c", "#a78bfa", "#4c1d95"].map((c, i) => (
-                <span
-                  key={c}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white text-[11px] font-bold text-white"
-                  style={{ background: c }}
-                >
-                  {["J", "A", "C", "K"][i]}
-                </span>
+              {["/testimonial-1.jpg", "/testimonial-2.jpg", "/testimonial-3.jpg", "/testimonial-4.jpg"].map((a) => (
+                <img
+                  key={a}
+                  src={a}
+                  alt="Jurigeek customer"
+                  loading="lazy"
+                  className="h-9 w-9 rounded-full border-2 border-brand-200 object-cover"
+                />
               ))}
             </div>
             <div>

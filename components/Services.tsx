@@ -75,7 +75,7 @@ export function Services() {
               </ul>
               <a
                 href={s.href}
-                className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-bold text-purple-300 transition group-hover:text-orange-400"
+                className="mt-auto inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-400 to-orange-500 px-5 py-2.5 text-sm font-bold text-purple-950 shadow-[0_8px_24px_-10px_rgba(249,115,22,0.6)] transition hover:from-orange-300 hover:to-orange-400 group-hover:shadow-glow-orange"
               >
                 Start a conversation
                 <ArrowIcon className="h-4 w-4" />
