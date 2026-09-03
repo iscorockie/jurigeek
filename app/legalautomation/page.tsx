@@ -12,6 +12,7 @@ import {
   WhatsAppIcon,
 } from "@/components/Icons";
 import { siteConfig, waLink } from "@/components/SiteConfig";
+import { Orbs, GridOverlay, CircuitLines, AiBadge } from "@/components/Effects";
 
 export const metadata: Metadata = {
   title: "Legal Automation",
@@ -64,33 +65,33 @@ export default function LegalAutomationPage() {
       <Navbar />
       <main id="main">
         {/* Hero */}
-        <section className="relative isolate overflow-hidden bg-cream-100 pt-32 pb-20 sm:pt-40 sm:pb-28">
-          <div
-            className="pointer-events-none absolute inset-0 -z-10"
-            style={{
-              backgroundImage: "radial-gradient(rgba(46,16,101,0.06) 1px, transparent 1px)",
-              backgroundSize: "28px 28px",
-            }}
-          />
-          <div className="pointer-events-none absolute -top-24 right-0 -z-10 h-96 w-96 rounded-full bg-lime-300/30 blur-[120px]" />
-          <div className="pointer-events-none absolute -left-16 bottom-0 -z-10 h-80 w-80 rounded-full bg-cream-200/60 blur-[100px]" />
+        <section className="relative isolate overflow-hidden bg-brand-100 pt-32 pb-20 sm:pt-40 sm:pb-28">
+          <GridOverlay />
+          <CircuitLines />
+          <Orbs />
+          <div className="pointer-events-none absolute -top-24 right-0 -z-10 h-96 w-96 rounded-full bg-purple-400/25 blur-[120px]" />
+          <div className="pointer-events-none absolute -left-16 bottom-0 -z-10 h-80 w-80 rounded-full bg-orange-400/20 blur-[100px]" />
 
-          <div className="container-x">
+          <div className="container-x relative">
             <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
               <div>
-                <span className="eyebrow">
-                  <span className="h-1.5 w-1.5 rounded-full bg-leaf-700" />
+                <span className="eyebrow glass !rounded-full !px-4 !py-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-purple-600" />
                   Legal Automation
                 </span>
                 <h1 className="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-6xl">
                   Turn repetitive legal work into{" "}
-                  <span className="text-leaf-700">fast, reliable systems</span>.
+                  <span className="gradient-text">fast, reliable systems</span>.
                 </h1>
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
                   From drafting and contract assembly to client intake and
                   workflows — we design and build tools that do the busy work, so
                   your team can focus on the judgment that matters.
                 </p>
+
+                <div className="mt-6">
+                  <AiBadge label="AI-assisted workflow engine" />
+                </div>
 
                 <div className="mt-9 flex flex-wrap items-center gap-4">
                   <a href="#contact" className="btn-lime">
@@ -110,14 +111,15 @@ export default function LegalAutomationPage() {
               </div>
 
               <div className="relative">
-                <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-lime-200/60 via-transparent to-cream-200/70 blur-2xl" />
+                <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-purple-500/30 via-transparent to-orange-400/30 blur-2xl" />
+                <div className="glass absolute inset-0 -z-0 !rounded-3xl" />
                 <img
                   src="/legalautomation.jpg"
                   alt="Automated legal document drafting on a laptop with scales of justice"
-                  className="aspect-[4/3] w-full rounded-3xl object-cover shadow-card"
+                  className="relative aspect-[4/3] w-full rounded-3xl object-cover shadow-card"
                 />
-                <div className="absolute -bottom-5 -left-4 flex items-center gap-3 rounded-2xl border border-white bg-white/90 px-5 py-3.5 shadow-card backdrop-blur">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-lime-400 text-ink">
+                <div className="glass-card absolute -bottom-5 -left-4 flex items-center gap-3 !rounded-2xl !border-white/70 !bg-white/70 !p-4">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-orange-400 to-orange-600 text-white">
                     <BotIcon className="h-6 w-6" />
                   </div>
                   <div>
@@ -131,18 +133,21 @@ export default function LegalAutomationPage() {
         </section>
 
         {/* Pain points */}
-        <section className="bg-leaf-900 py-20 text-cream-100 sm:py-24">
-          <div className="container-x">
+        <section className="relative overflow-hidden bg-gradient-to-br from-purple-950 via-purple-900 to-purple-950 py-20 text-white sm:py-24">
+          <GridOverlay dark />
+          <CircuitLines dark />
+          <Orbs variant="dark" />
+          <div className="container-x relative">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
-                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-lime-400">
-                  <span className="h-1.5 w-1.5 rounded-full bg-lime-400" />
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-orange-300">
+                  <span className="h-1.5 w-1.5 rounded-full bg-orange-400" />
                   The problem
                 </span>
                 <h2 className="mt-5 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">
                   Legal work is full of repetition. It shouldn&rsquo;t be.
                 </h2>
-                <p className="mt-5 text-lg leading-relaxed text-cream-100/70">
+                <p className="mt-5 text-lg leading-relaxed text-white/70">
                   Manual, repetitive legal tasks slow firms down, introduce errors
                   and keep people from the help they need. Automation reclaims that
                   time — and makes the output more reliable.
@@ -150,14 +155,11 @@ export default function LegalAutomationPage() {
               </div>
               <ul className="grid grid-cols-1 gap-4">
                 {painPoints.map((p) => (
-                  <li
-                    key={p}
-                    className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-5"
-                  >
-                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-lime-400 text-leaf-800">
+                  <li key={p} className="glass-dark flex items-start gap-3 !rounded-2xl !p-5">
+                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-purple-600 to-orange-400 text-white">
                       <CheckIcon className="h-4 w-4" />
                     </span>
-                    <span className="text-cream-100/90">{p}</span>
+                    <span className="text-white/90">{p}</span>
                   </li>
                 ))}
               </ul>
@@ -166,13 +168,15 @@ export default function LegalAutomationPage() {
         </section>
 
         {/* Features */}
-        <section className="bg-cream-100 py-24 sm:py-28">
-          <div className="container-x">
+        <section className="relative overflow-hidden bg-brand-100 py-24 sm:py-28">
+          <GridOverlay />
+          <Orbs />
+          <div className="container-x relative">
             <SectionHeading
               eyebrow="What we build"
               title={
                 <>
-                  Automation that fits <span className="text-leaf-700">how you work</span>
+                  Automation that fits <span className="gradient-text">how you work</span>
                 </>
               }
               sub="We combine real legal process knowledge with reliable engineering — so the tools you get are practical, not theoretical."
@@ -180,11 +184,8 @@ export default function LegalAutomationPage() {
 
             <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
               {features.map((f) => (
-                <article
-                  key={f.title}
-                  className="card-light flex flex-col p-8 transition hover:-translate-y-1 hover:shadow-pill"
-                >
-                  <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-lime-200/70 text-leaf-800">
+                <article key={f.title} className="glass-card group flex flex-col !rounded-3xl transition hover:-translate-y-1.5 hover:shadow-glow">
+                  <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-600 to-purple-900 text-white shadow-lg">
                     <f.icon className="h-7 w-7" />
                   </div>
                   <h3 className="mt-6 text-2xl font-extrabold text-ink">{f.title}</h3>
@@ -196,21 +197,23 @@ export default function LegalAutomationPage() {
         </section>
 
         {/* Process */}
-        <section className="bg-cream-50 py-24 sm:py-28">
-          <div className="container-x">
+        <section className="relative overflow-hidden bg-brand-50 py-24 sm:py-28">
+          <GridOverlay />
+          <Orbs />
+          <div className="container-x relative">
             <SectionHeading
               eyebrow="How it works"
               title={
                 <>
-                  From idea to <span className="text-leaf-700">running system</span>
+                  From idea to <span className="gradient-text">running system</span>
                 </>
               }
               sub="A clear, collaborative process that turns a pain point into a tool your team actually uses."
             />
             <ol className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {steps.map((s) => (
-                <li key={s.n} className="card-light relative rounded-2xl p-7">
-                  <span className="font-nexa text-3xl font-extrabold tabular-nums text-orange-500">{s.n}</span>
+                <li key={s.n} className="glass-card relative !rounded-2xl !p-7 transition hover:-translate-y-1 hover:shadow-glow">
+                  <span className="font-nexa gradient-text-orange text-3xl font-extrabold tabular-nums">{s.n}</span>
                   <h3 className="mt-4 text-xl font-extrabold text-ink">{s.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.desc}</p>
                 </li>
@@ -220,12 +223,15 @@ export default function LegalAutomationPage() {
         </section>
 
         {/* CTA */}
-        <section id="contact" className="bg-leaf-900 py-20 text-cream-100 sm:py-24">
-          <div className="container-x text-center">
+        <section id="contact" className="relative overflow-hidden bg-gradient-to-br from-purple-950 via-purple-900 to-purple-950 py-20 text-white sm:py-24">
+          <GridOverlay dark />
+          <CircuitLines dark />
+          <Orbs variant="dark" />
+          <div className="container-x relative text-center">
             <h2 className="mx-auto max-w-2xl text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">
               Ready to put your repetitive legal work on autopilot?
             </h2>
-            <p className="mx-auto mt-4 max-w-xl text-lg text-cream-100/70">
+            <p className="mx-auto mt-4 max-w-xl text-lg text-white/70">
               Tell us about the process you want to streamline — we&rsquo;ll show
               you what&rsquo;s possible.
             </p>

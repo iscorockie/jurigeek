@@ -68,6 +68,8 @@ const config: Config = {
       boxShadow: {
         card: "0 24px 60px -24px rgba(46, 16, 101, 0.18)",
         pill: "0 10px 30px -12px rgba(46, 16, 101, 0.25)",
+        glow: "0 0 40px -10px rgba(124, 58, 237, 0.5)",
+        "glow-orange": "0 0 40px -10px rgba(249, 115, 22, 0.5)",
       },
       keyframes: {
         floaty: {
@@ -78,10 +80,20 @@ const config: Config = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        floatSlow: {
+          "0%, 100%": { transform: "translate(0,0) scale(1)" },
+          "50%": { transform: "translate(20px,-30px) scale(1.08)" },
+        },
+        blink: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.25" },
+        },
       },
       animation: {
         floaty: "floaty 6s ease-in-out infinite",
         marquee: "marquee 28s linear infinite",
+        floatSlow: "floatSlow 18s ease-in-out infinite",
+        blink: "blink 2.4s ease-in-out infinite",
       },
     },
   },

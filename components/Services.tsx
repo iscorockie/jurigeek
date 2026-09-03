@@ -1,5 +1,6 @@
 import { BotIcon, ShieldIcon, GraduationIcon, ScaleIcon, ArrowIcon } from "./Icons";
 import { SectionHeading } from "./SectionHeading";
+import { Orbs, GridOverlay } from "./Effects";
 
 export const services = [
   {
@@ -9,7 +10,8 @@ export const services = [
     title: "Legal automation",
     desc: "We design and build tools that turn repetitive legal work into fast, reliable systems — from drafting and contract assembly to client intake and workflows.",
     points: ["Document & contract automation", "Workflow & intake systems", "Process design for law firms"],
-    tint: "bg-lime-200/70 text-leaf-800",
+    tint: "bg-gradient-to-br from-purple-500 to-purple-700 text-white",
+    glow: "group-hover:shadow-glow",
   },
   {
     href: "#contact",
@@ -18,7 +20,8 @@ export const services = [
     title: "Technology law consultancy",
     desc: "Practical, current legal advisory for a digital economy — helping innovators, founders and organisations navigate data protection and technology risk.",
     points: ["Data protection & privacy", "Regulatory & compliance advisory", "Digital contracts & policy"],
-    tint: "bg-cream-200 text-leaf-800",
+    tint: "bg-gradient-to-br from-orange-400 to-orange-600 text-white",
+    glow: "group-hover:shadow-glow-orange",
   },
   {
     href: "#contact",
@@ -27,19 +30,22 @@ export const services = [
     title: "Tech law education",
     desc: "We teach lawyers, students and professionals where law and technology meet — through training, workshops and accessible learning for the real world.",
     points: ["Courses & workshops", "Legal-tech training", "Public legal education"],
-    tint: "bg-leaf-700 text-lime-300",
+    tint: "bg-gradient-to-br from-purple-800 to-purple-950 text-orange-300",
+    glow: "group-hover:shadow-glow",
   },
 ];
 
 export function Services() {
   return (
-    <section id="services" className="relative scroll-mt-20 bg-cream-100 py-24 sm:py-28">
-      <div className="container-x">
+    <section id="services" className="relative scroll-mt-20 overflow-hidden bg-brand-100 py-24 sm:py-28">
+      <GridOverlay />
+      <Orbs />
+      <div className="container-x relative">
         <SectionHeading
           eyebrow="What we do"
           title={
             <>
-              Three ways we move justice <span className="text-leaf-700">forward</span>
+              Three ways we move justice <span className="gradient-text">forward</span>
             </>
           }
           sub="From building the tools to advising on the law and teaching the next generation — everything sits at the intersection of law and technology."
@@ -49,12 +55,12 @@ export function Services() {
           {services.map((s) => (
             <article
               key={s.title}
-              className="card-light group flex flex-col p-8 transition hover:-translate-y-1 hover:shadow-pill"
+              className={`glass-card group flex flex-col !rounded-3xl transition duration-300 hover:-translate-y-1.5 ${s.glow}`}
             >
-              <div className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${s.tint}`}>
+              <div className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl shadow-lg ${s.tint}`}>
                 <s.icon className="h-7 w-7" />
               </div>
-              <span className="mt-6 text-xs font-bold uppercase tracking-[0.15em] text-ink-soft">
+              <span className="mt-6 text-xs font-bold uppercase tracking-[0.15em] text-purple-600">
                 {s.tag}
               </span>
               <h3 className="mt-2 text-2xl font-extrabold text-ink">{s.title}</h3>
@@ -62,14 +68,14 @@ export function Services() {
               <ul className="mt-6 space-y-2.5">
                 {s.points.map((p) => (
                   <li key={p} className="flex items-start gap-2.5 text-sm text-ink-soft">
-                    <ScaleIcon className="mt-0.5 h-4 w-4 shrink-0 text-leaf-700" />
+                    <ScaleIcon className="mt-0.5 h-4 w-4 shrink-0 text-purple-600" />
                     {p}
                   </li>
                 ))}
               </ul>
               <a
                 href={s.href}
-                className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-bold text-leaf-700 transition group-hover:text-ink"
+                className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-bold text-purple-700 transition group-hover:text-orange-500"
               >
                 Start a conversation
                 <ArrowIcon className="h-4 w-4" />

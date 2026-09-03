@@ -1,5 +1,6 @@
 import { GraduationIcon, CheckIcon, ArrowIcon } from "./Icons";
 import { waLink, siteConfig } from "./SiteConfig";
+import { Orbs, GridOverlay } from "./Effects";
 
 const outcomes = [
   "Understand the rules governing data and digital platforms",
@@ -10,20 +11,23 @@ const outcomes = [
 
 export function Education() {
   return (
-    <section id="education" className="relative scroll-mt-20 bg-cream-50 py-24 sm:py-28">
-      <div className="container-x">
+    <section id="education" className="relative scroll-mt-20 overflow-hidden bg-brand-50 py-24 sm:py-28">
+      <GridOverlay />
+      <Orbs />
+      <div className="container-x relative">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
           {/* image */}
           <div className="relative order-2 lg:order-1">
-            <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-lime-200/50 to-cream-200/60 blur-2xl" />
+            <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-purple-500/25 via-transparent to-orange-400/25 blur-2xl" />
+            <div className="glass absolute inset-0 -z-0 !rounded-3xl" />
             <img
               src="/about.jpg"
               alt="Jurigeek team collaborating on legal technology"
-              className="aspect-[4/3] w-full rounded-3xl object-cover shadow-card"
+              className="relative aspect-[4/3] w-full rounded-3xl object-cover shadow-card"
               loading="lazy"
             />
-            <div className="absolute -bottom-5 left-6 flex items-center gap-3 rounded-2xl border border-white bg-white/90 px-5 py-3.5 shadow-card backdrop-blur">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-lime-400 text-ink">
+            <div className="glass-card absolute -bottom-5 left-6 flex items-center gap-3 !rounded-2xl !border-white/70 !bg-white/70 !p-4 !shadow-card">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-orange-400 to-orange-600 text-white">
                 <GraduationIcon className="h-6 w-6" />
               </div>
               <div>
@@ -47,8 +51,8 @@ export function Education() {
 
             <ul className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {outcomes.map((o) => (
-                <li key={o} className="flex items-start gap-3 rounded-xl border border-cream-200 bg-white/80 p-4">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-lime-400 text-leaf-800">
+                <li key={o} className="glass flex items-start gap-3 !rounded-xl !border-white/70 !bg-white/60 p-4">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-purple-600 to-orange-400 text-white">
                     <CheckIcon className="h-3.5 w-3.5" />
                   </span>
                   <span className="text-sm font-medium text-ink-soft">{o}</span>

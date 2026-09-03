@@ -5,7 +5,9 @@ import { siteConfig } from "./SiteConfig";
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-leaf-950 text-cream-100/70">
+    <footer className="relative overflow-hidden bg-gradient-to-br from-purple-950 via-purple-900 to-purple-950 text-white/70">
+      <div className="pointer-events-none absolute inset-0 tech-grid opacity-60" aria-hidden="true" />
+      <div className="pointer-events-none absolute -top-20 right-0 h-72 w-72 rounded-full bg-orange-400/10 blur-[120px]" aria-hidden="true" />
       <div className="container-x py-16">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           <div className="md:col-span-2">

@@ -1,9 +1,12 @@
 import { ArrowIcon } from "./Icons";
+import { Orbs, GridOverlay, CircuitLines } from "./Effects";
 
 export function About() {
   return (
-    <section id="about" className="relative scroll-mt-20 bg-cream-50 py-24 sm:py-28">
-      <div className="grid-bg pointer-events-none absolute inset-0 opacity-[0.35]" style={{ backgroundImage: "radial-gradient(rgba(46,16,101,0.07) 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
+    <section id="about" className="relative scroll-mt-20 overflow-hidden bg-brand-50 py-24 sm:py-28">
+      <GridOverlay />
+      <Orbs />
+      <CircuitLines />
       <div className="container-x relative">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
           <div>
@@ -24,20 +27,26 @@ export function About() {
             </a>
           </div>
 
-          {/* stats widget card */}
+          {/* stats widget card — glass */}
           <div className="relative mx-auto w-full max-w-sm">
-            <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-lime-200/60 via-transparent to-cream-200/60 blur-2xl" />
-            <div className="card-light overflow-hidden rounded-3xl p-6">
+            <div className="absolute -inset-5 -z-10 rounded-[2.5rem] bg-gradient-to-br from-purple-500/30 via-transparent to-orange-400/30 blur-2xl" />
+            <div className="glass-card overflow-hidden !rounded-3xl !p-6">
               <div className="flex items-center justify-between">
                 <span className="text-sm font-bold text-ink">Access to justice</span>
-                <span className="chip !text-leaf-700">Live</span>
+                <span className="chip !text-purple-700">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-75" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-orange-400" />
+                  </span>
+                  Live
+                </span>
               </div>
               <div className="mt-6 flex items-end gap-2">
-                <span className="font-nexa text-5xl font-extrabold tabular-nums text-ink">49%</span>
+                <span className="font-nexa gradient-text text-5xl font-extrabold tabular-nums">49%</span>
                 <span className="mb-2 text-xs font-semibold text-ink-soft">of people miss legal help</span>
               </div>
-              <div className="mt-4 h-3 w-full overflow-hidden rounded-full bg-cream-200">
-                <div className="h-full w-[49%] rounded-full bg-gradient-to-r from-lime-400 to-leaf-700" />
+              <div className="mt-4 h-3 w-full overflow-hidden rounded-full bg-white/60">
+                <div className="h-full w-[49%] rounded-full bg-gradient-to-r from-purple-600 to-orange-400" />
               </div>
 
               <div className="mt-6 grid grid-cols-2 gap-3">
@@ -47,7 +56,7 @@ export function About() {
                   { icon: "🧠", label: "Educate" },
                   { icon: "🛡", label: "Compliance" },
                 ].map((m) => (
-                  <div key={m.label} className="rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-center">
+                  <div key={m.label} className="rounded-xl border border-white/70 bg-white/60 px-4 py-3 text-center backdrop-blur">
                     <div className="text-lg">{m.icon}</div>
                     <div className="mt-1 text-xs font-bold text-ink">{m.label}</div>
                   </div>

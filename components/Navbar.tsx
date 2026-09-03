@@ -18,7 +18,9 @@ export function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all ${
-        scrolled ? "bg-cream-50/85 shadow-sm backdrop-blur-xl" : "bg-transparent"
+        scrolled
+          ? "border-b border-white/50 bg-white/60 shadow-[0_8px_30px_-18px_rgba(88,28,135,0.5)] backdrop-blur-xl"
+          : "bg-transparent"
       }`}
     >
       <nav className="container-x flex h-[4.5rem] items-center justify-between">
@@ -39,7 +41,7 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
-          <a href="#contact" className="hidden rounded-full bg-ink px-6 py-3 text-sm font-bold text-cream-100 transition hover:bg-leaf-800 sm:inline-flex">
+          <a href="#contact" className="hidden rounded-full bg-gradient-to-r from-purple-900 to-purple-950 px-6 py-3 text-sm font-bold text-white shadow-[0_10px_30px_-12px_rgba(88,28,135,0.8)] transition hover:from-purple-800 hover:to-purple-900 sm:inline-flex">
             Get in touch
           </a>
           <button
@@ -47,7 +49,7 @@ export function Navbar() {
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
             aria-expanded={open}
-            className="inline-flex items-center justify-center rounded-full border border-leaf-900/15 bg-white/50 p-2.5 text-ink lg:hidden"
+            className="inline-flex items-center justify-center rounded-full border border-purple-900/15 bg-white/50 p-2.5 text-ink backdrop-blur lg:hidden"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               {open ? (
@@ -76,7 +78,7 @@ export function Navbar() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-ink px-6 py-3 text-center text-sm font-bold text-cream-100"
+              className="mt-2 rounded-full bg-gradient-to-r from-purple-900 to-purple-950 px-6 py-3 text-center text-sm font-bold text-white"
             >
               Get in touch
             </a>
