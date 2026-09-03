@@ -25,7 +25,7 @@ export function Navbar() {
     >
       <nav className="container-x flex h-[4.5rem] items-center justify-between">
         <a href="/" aria-label="Jurigeek home" className="shrink-0">
-          <Logo className="h-8" color="#2e1065" />
+          <Logo className="h-8" color="#ffffff" />
         </a>
 
         <div className="hidden items-center gap-9 lg:flex">
