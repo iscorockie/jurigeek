@@ -1,4 +1,4 @@
-import { BotIcon, ShieldIcon, GraduationIcon, ScaleIcon, ArrowIcon } from "./Icons";
+import { BotIcon, ShieldIcon, GraduationIcon, ArrowIcon } from "./Icons";
 import { SectionHeading } from "./SectionHeading";
 import { Orbs, GridOverlay } from "./Effects";
 
@@ -8,7 +8,6 @@ export const services = [
     icon: BotIcon,
     title: "Legal automation",
     desc: "We design and build tools that turn repetitive legal work into fast, reliable systems, from drafting and contract assembly to client intake and workflows.",
-    points: ["Document & contract automation", "Workflow & intake systems", "Process design for law firms"],
     tint: "bg-gradient-to-br from-orange-400 to-orange-600 text-white",
     glow: "group-hover:shadow-glow-orange",
   },
@@ -17,7 +16,6 @@ export const services = [
     icon: ShieldIcon,
     title: "Technology law consultancy",
     desc: "Practical, current legal advisory for a digital economy: helping innovators, founders and organisations navigate data protection and technology risk.",
-    points: ["Data protection & privacy", "Regulatory & compliance advisory", "Digital contracts & policy"],
     tint: "bg-gradient-to-br from-orange-500 to-orange-700 text-white",
     glow: "group-hover:shadow-glow-orange",
   },
@@ -26,7 +24,6 @@ export const services = [
     icon: GraduationIcon,
     title: "Tech law education",
     desc: "We teach lawyers, students and professionals where law and technology meet, through training, workshops and accessible learning for the real world.",
-    points: ["Courses & workshops", "Legal-tech training", "Public legal education"],
     tint: "bg-gradient-to-br from-orange-600 to-orange-800 text-white",
     glow: "group-hover:shadow-glow-orange",
   },
@@ -59,14 +56,6 @@ export function Services() {
               </div>
               <h3 className="mt-6 text-2xl font-extrabold text-ink">{s.title}</h3>
               <p className="mt-3 leading-relaxed text-ink-soft">{s.desc}</p>
-              <ul className="mt-6 space-y-2.5">
-                {s.points.map((p) => (
-                  <li key={p} className="flex items-start gap-2.5 text-sm text-ink-soft">
-                    <ScaleIcon className="mt-0.5 h-4 w-4 shrink-0 text-orange-300" />
-                    {p}
-                  </li>
-                ))}
-              </ul>
               <a
                 href={s.href}
                 className="mt-auto inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#FF6A00] to-[#FF3D00] px-5 py-2.5 text-sm font-bold text-white shadow-[0_8px_24px_-10px_rgba(255,106,0,0.6)] transition hover:from-[#FF8C1A] hover:to-[#FF6A00] group-hover:shadow-glow-orange"
