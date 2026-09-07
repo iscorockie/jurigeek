@@ -6,7 +6,6 @@ export const services = [
   {
     href: "/legalautomation",
     icon: BotIcon,
-    tag: "Legal Automation",
     title: "Legal automation",
     desc: "We design and build tools that turn repetitive legal work into fast, reliable systems, from drafting and contract assembly to client intake and workflows.",
     points: ["Document & contract automation", "Workflow & intake systems", "Process design for law firms"],
@@ -16,7 +15,6 @@ export const services = [
   {
     href: "/techlaw-consultancy",
     icon: ShieldIcon,
-    tag: "Technology Law Consultancy",
     title: "Technology law consultancy",
     desc: "Practical, current legal advisory for a digital economy: helping innovators, founders and organisations navigate data protection and technology risk.",
     points: ["Data protection & privacy", "Regulatory & compliance advisory", "Digital contracts & policy"],
@@ -26,7 +24,6 @@ export const services = [
   {
     href: "/tech-law-education",
     icon: GraduationIcon,
-    tag: "Tech Law Education",
     title: "Tech law education",
     desc: "We teach lawyers, students and professionals where law and technology meet, through training, workshops and accessible learning for the real world.",
     points: ["Courses & workshops", "Legal-tech training", "Public legal education"],
@@ -60,10 +57,7 @@ export function Services() {
               <div className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl shadow-lg shadow-orange-500/25 ${s.tint}`}>
                 <s.icon className="h-7 w-7" />
               </div>
-              <span className="mt-6 text-xs font-bold uppercase tracking-[0.15em] text-orange-300">
-                {s.tag}
-              </span>
-              <h3 className="mt-2 text-2xl font-extrabold text-ink">{s.title}</h3>
+              <h3 className="mt-6 text-2xl font-extrabold text-ink">{s.title}</h3>
               <p className="mt-3 leading-relaxed text-ink-soft">{s.desc}</p>
               <ul className="mt-6 space-y-2.5">
                 {s.points.map((p) => (
