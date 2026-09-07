@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -98,9 +99,11 @@ export default function TechLawConsultancyPage() {
               <div className="relative">
                 <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-orange-400/30 via-transparent to-purple-500/30 blur-2xl" />
                 <div className="glass absolute inset-0 -z-0 !rounded-3xl" />
-                <img
+                <Image
                   src="/techlaw-consultancy.jpg"
                   alt="Data-protection and contracts dashboard with scales of justice"
+                  width={1448}
+                  height={1086}
                   className="relative aspect-[4/3] w-full rounded-3xl object-cover shadow-card"
                 />
                 <div className="glass-card absolute -bottom-5 -left-4 flex items-center gap-3 !rounded-2xl !border-white/[0.12] !bg-white/[0.05] !p-4">

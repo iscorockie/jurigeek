@@ -1,4 +1,5 @@
 import { GraduationIcon, CheckIcon, ArrowIcon } from "./Icons";
+import Image from "next/image";
 import { waLink, siteConfig } from "./SiteConfig";
 import { Orbs, GridOverlay } from "./Effects";
 
@@ -20,11 +21,12 @@ export function Education() {
           <div className="reveal relative order-2 lg:order-1">
             <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-orange-500/25 via-transparent to-orange-400/20 blur-2xl" />
             <div className="glass absolute inset-0 -z-0 !rounded-3xl" />
-            <img
+            <Image
               src="/about.jpg"
               alt="Jurigeek team collaborating on legal technology"
+              width={1448}
+              height={1086}
               className="relative aspect-[4/3] w-full rounded-3xl object-cover shadow-card"
-              loading="lazy"
             />
             <div className="glass-card absolute -bottom-5 left-6 flex items-center gap-3 !rounded-2xl !border-white/[0.12] !bg-white/[0.05] !p-4 !shadow-card">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-orange-400 to-orange-600 text-white">

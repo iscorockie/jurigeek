@@ -4,6 +4,7 @@ import {
   CheckIcon,
   StarIcon,
 } from "./Icons";
+import Image from "next/image";
 import { AiBadge, GridOverlay } from "./Effects";
 
 const heroStats = [
@@ -83,11 +84,12 @@ export function Hero() {
           <div className="animate-floaty inline-flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-full border border-white/[0.14] bg-[#141414]/85 px-5 py-3 shadow-[0_16px_48px_-16px_rgba(0,0,0,0.9),0_0_40px_-18px_rgba(255,106,0,0.45)] backdrop-blur-xl sm:px-6">
             <div className="flex -space-x-2.5">
               {["/testimonial-1.jpg", "/testimonial-2.jpg", "/testimonial-3.jpg", "/testimonial-4.jpg"].map((a) => (
-                <img
+                <Image
                   key={a}
                   src={a}
                   alt="Jurigeek customer"
-                  loading="lazy"
+                  width={36}
+                  height={36}
                   className="h-9 w-9 rounded-full border-2 border-[#141414] object-cover"
                 />
               ))}

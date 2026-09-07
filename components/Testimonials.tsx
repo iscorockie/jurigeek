@@ -1,4 +1,5 @@
 import { QuoteIcon } from "./Icons";
+import Image from "next/image";
 import { SectionHeading } from "./SectionHeading";
 import { Orbs, GridOverlay } from "./Effects";
 
@@ -53,10 +54,11 @@ export function Testimonials() {
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
               <figcaption className="mt-auto flex items-center gap-3 pt-5">
-                <img
+                <Image
                   src={t.avatar}
                   alt={t.name}
-                  loading="lazy"
+                  width={44}
+                  height={44}
                   className="h-11 w-11 rounded-full border-2 border-orange-400/40 object-cover shadow-glow-soft"
                 />
                 <div>

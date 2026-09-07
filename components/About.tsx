@@ -7,6 +7,7 @@ import {
   SearchIcon,
   GraduationIcon,
 } from "./Icons";
+import Image from "next/image";
 import { Orbs, GridOverlay, CircuitLines } from "./Effects";
 
 export function About() {
@@ -90,10 +91,11 @@ export function About() {
             </div>
 
             {/* team photo (stock) */}
-            <img
+            <Image
               src="/about-team.jpg"
               alt="A legal professional working at a desk with scales of justice"
-              loading="lazy"
+              width={500}
+              height={334}
               className="mt-4 w-full rounded-2xl border border-white/[0.12] object-cover shadow-card"
             />
           </div>
