@@ -5,14 +5,14 @@
 
 /** Large soft gradient orbs that drift slowly. */
 export function Orbs({ variant = "light" }: { variant?: "light" | "dark" }) {
-  const purple = variant === "light" ? "rgba(139,92,246,0.28)" : "rgba(167,139,250,0.30)";
-  const orange = variant === "light" ? "rgba(249,115,22,0.22)" : "rgba(249,115,22,0.22)";
-  const white = variant === "light" ? "rgba(196,181,253,0.12)" : "rgba(255,255,255,0.10)";
+  const orange = variant === "light" ? "rgba(255,106,0,0.16)" : "rgba(255,106,0,0.20)";
+  const blue = variant === "light" ? "rgba(111,177,255,0.09)" : "rgba(111,177,255,0.10)";
+  const white = variant === "light" ? "rgba(255,255,255,0.07)" : "rgba(255,255,255,0.08)";
   return (
     <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
       <div
         className="absolute -top-24 right-[-10%] h-[28rem] w-[28rem] rounded-full blur-[120px] animate-floatSlow"
-        style={{ background: `radial-gradient(circle at center, ${purple}, transparent 70%)` }}
+        style={{ background: `radial-gradient(circle at center, ${blue}, transparent 70%)` }}
       />
       <div
         className="absolute bottom-[-6rem] left-[-8%] h-[24rem] w-[24rem] rounded-full blur-[120px]"
@@ -40,7 +40,7 @@ export function GridOverlay({ dark = false }: { dark?: boolean }) {
 
 /** Faint circuit / network lines evoking automation + connectivity. */
 export function CircuitLines({ dark = false }: { dark?: boolean }) {
-  const stroke = dark ? "rgba(255,255,255,0.10)" : "rgba(124,58,237,0.12)";
+  const stroke = dark ? "rgba(255,255,255,0.10)" : "rgba(255,138,26,0.10)";
   return (
     <svg
       className="pointer-events-none absolute inset-0 -z-10 h-full w-full"
@@ -68,8 +68,8 @@ export function AiBadge({ label = "AI-assisted" }: { label?: string }) {
   return (
     <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-semibold text-white/90 backdrop-blur-md">
       <span className="relative flex h-2 w-2">
-        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-lime-400 opacity-75" />
-        <span className="relative inline-flex h-2 w-2 rounded-full bg-lime-400" />
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-75" />
+        <span className="relative inline-flex h-2 w-2 rounded-full bg-orange-400" />
       </span>
       {label}
     </span>

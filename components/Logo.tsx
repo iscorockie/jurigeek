@@ -7,7 +7,7 @@ import type { CSSProperties } from "react";
  */
 export function BrandLogo({
   className = "h-9",
-  color = "#2e1065",
+  color = "#f5f5f5",
   style,
 }: {
   className?: string;
@@ -59,7 +59,7 @@ export function LogoMark({ className = "h-9 w-9" }: { className?: string }) {
 
 export function Logo({
   className = "h-9",
-  color = "#2e1065",
+  color = "#f5f5f5",
 }: {
   className?: string;
   color?: string;

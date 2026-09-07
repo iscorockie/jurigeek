@@ -1,12 +1,40 @@
 @import "@fontsource/inter/index.css";
-@import "@fontsource/sora/index.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ------------------------------------------------------------------ */
+/* Jurigeek design tokens — dark glassmorphism, orange-to-black identity */
+/* ------------------------------------------------------------------ */
 :root {
-  --bg: 7 4 13;
+  /* Base surfaces */
+  --jg-bg: #0a0a0a;
+  --jg-bg-soft: #111111;
+
+  /* Orange identity */
+  --jg-orange: #ff6a00;
+  --jg-orange-light: #ff8c1a;
+  --jg-orange-deep: #ff3d00;
+  --jg-ember: #3d1400;
+
+  /* Glassmorphism */
+  --jg-glass-bg: rgba(255, 255, 255, 0.06);
+  --jg-glass-bg-soft: rgba(255, 255, 255, 0.04);
+  --jg-glass-border: rgba(255, 255, 255, 0.12);
+  --jg-glass-border-soft: rgba(255, 255, 255, 0.08);
+
+  /* Cool blue supporting accent (data-heavy tiles only) */
+  --jg-blue-accent: #6fb1ff;
+  --jg-blue-glass-bg: rgba(84, 138, 255, 0.09);
+  --jg-blue-glass-border: rgba(127, 168, 255, 0.18);
+
+  /* Ink */
+  --jg-ink: #f5f5f5;
+  --jg-muted: #a3a3a3;
+
+  /* Legacy alias kept for easy token swaps later */
+  --bg: 10 10 10;
 }
 
 @layer base {
@@ -16,28 +44,37 @@
 
   body {
     @apply bg-brand-100 font-sans text-ink antialiased;
+    color: var(--jg-ink);
+    background-color: var(--jg-bg);
+    /* Continuous canvas: faint ember glow anchored at the bottom edge,
+       exactly like the reference — orange bleeding through #3D1400 into black. */
     background-image:
-      radial-gradient(900px 500px at 85% -10%, rgba(124, 58, 237, 0.18), transparent 55%),
-      radial-gradient(800px 500px at -10% 20%, rgba(249, 115, 22, 0.10), transparent 50%);
+      radial-gradient(1100px 620px at 50% 112%, rgba(255, 106, 0, 0.16), rgba(61, 20, 0, 0.10) 42%, transparent 66%),
+      radial-gradient(700px 420px at 92% 100%, rgba(255, 106, 0, 0.08), transparent 60%),
+      radial-gradient(900px 500px at 8% 105%, rgba(255, 61, 0, 0.06), transparent 60%);
     background-attachment: fixed;
   }
 
   h1, h2, h3, h4, h5 {
     @apply font-display;
+    letter-spacing: -0.02em;
+    color: var(--jg-ink);
   }
 
   .font-display {
-    font-family: "Sora", "Inter", ui-sans-serif, system-ui, sans-serif;
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
 
+  /* Numeric lockup (stats): Inter with tabular figures, no CDN dependency */
   .font-nexa {
-    font-family: "Nexa", "Nexa Bold", "Nexa Light", "Nexa Book", "Sora", "Inter", ui-sans-serif, system-ui, sans-serif;
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
     font-feature-settings: "tnum", "lnum";
+    letter-spacing: -0.01em;
   }
 
   ::selection {
-    background: rgba(249, 115, 22, 0.4);
-    color: #06030d;
+    background: rgba(255, 106, 0, 0.45);
+    color: #ffffff;
   }
 }
 
@@ -46,76 +83,161 @@
     @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12;
   }
 
+  /* Eyebrow label — orange dot, muted uppercase */
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-purple-300;
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-orange-300;
   }
 
+  /* Primary CTA — orange gradient pill with a gentle glow pulse */
   .btn-lime {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-400 to-orange-500 px-7 py-3.5 text-sm font-bold text-purple-950 shadow-[0_10px_30px_-10px_rgba(249,115,22,0.7)] transition hover:from-orange-300 hover:to-orange-400 active:translate-y-px;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold text-white transition active:translate-y-px;
+    background-image: linear-gradient(100deg, var(--jg-orange) 0%, var(--jg-orange-deep) 100%);
+    box-shadow: 0 10px 30px -10px rgba(255, 106, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    animation: cta-pulse 3s ease-in-out infinite;
+  }
+  .btn-lime:hover {
+    background-image: linear-gradient(100deg, var(--jg-orange-light) 0%, var(--jg-orange) 100%);
+    box-shadow: 0 0 0 1px rgba(255, 140, 26, 0.35), 0 12px 40px -8px rgba(255, 106, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    animation-play-state: paused;
   }
 
-  .btn-dark {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-purple-700 px-7 py-3.5 text-sm font-bold text-white shadow-[0_10px_30px_-12px_rgba(124,58,237,0.8)] transition hover:from-purple-400 hover:to-purple-600 active:translate-y-px;
-  }
-
+  /* Secondary CTA — glass outline pill */
   .btn-light {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-7 py-3.5 text-sm font-bold text-white backdrop-blur transition hover:bg-white/10 hover:shadow-glow;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border px-7 py-3.5 text-sm font-bold text-white transition active:translate-y-px;
+    border-color: var(--jg-glass-border);
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .btn-light:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 0 40px -12px rgba(255, 106, 0, 0.35);
   }
 
-  .chip {
-    @apply inline-flex items-center gap-1.5 rounded-full border border-white/[0.12] bg-white/[0.07] px-3.5 py-1.5 text-xs font-semibold text-purple-200 shadow-[0_8px_24px_-12px_rgba(0,0,0,0.8)] backdrop-blur-xl;
+  /* Tertiary CTA — dark glass pill (was the purple "dark" button) */
+  .btn-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border px-7 py-3.5 text-sm font-bold text-white transition active:translate-y-px;
+    border-color: var(--jg-glass-border);
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
   }
+  .btn-dark:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Small glass chip (trust badges, status pills) */
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-semibold text-orange-200;
+    border: 1px solid var(--jg-glass-border);
+    background-color: var(--jg-glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 24px -12px rgba(0, 0, 0, 0.8);
+  }
+
+  /* ---------------- Frosted glass surfaces ---------------- */
 
   .card-light {
-    @apply rounded-2xl border border-white/10 bg-white/[0.05] shadow-card backdrop-blur-xl;
+    border-radius: 1.25rem;
+    border: 1px solid var(--jg-glass-border);
+    background-color: var(--jg-glass-bg-soft);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.7);
   }
 
-  /* ---- Dark glassmorphism ---- */
   .glass {
-    @apply rounded-2xl border border-white/[0.12] bg-white/[0.07] shadow-[0_8px_40px_-16px_rgba(0,0,0,0.7)] backdrop-blur-xl;
+    @apply rounded-2xl;
+    border: 1px solid var(--jg-glass-border);
+    background-color: var(--jg-glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 40px -16px rgba(0, 0, 0, 0.7);
   }
 
   .glass-dark {
-    @apply rounded-2xl border border-white/10 bg-white/[0.04] shadow-[0_8px_40px_-16px_rgba(0,0,0,0.8)] backdrop-blur-xl;
+    @apply rounded-2xl;
+    border: 1px solid var(--jg-glass-border-soft);
+    background-color: var(--jg-glass-bg-soft);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 40px -16px rgba(0, 0, 0, 0.8);
   }
 
   .glass-card {
-    @apply relative overflow-hidden rounded-3xl border border-white/[0.12] bg-white/[0.05] p-8 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.8)] backdrop-blur-2xl;
+    @apply relative overflow-hidden rounded-3xl p-8;
+    border: 1px solid var(--jg-glass-border);
+    background-color: var(--jg-glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px -30px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  .glass-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.18);
   }
 
-  /* ---- Tech / AI gradient accents ---- */
+  /* Data-heavy tile — cool blue glass, reserved for stats / metrics */
+  .glass-data {
+    @apply rounded-2xl;
+    border: 1px solid var(--jg-blue-glass-border);
+    background-color: var(--jg-blue-glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 40px -16px rgba(0, 0, 0, 0.7), inset 0 0 32px -18px rgba(111, 177, 255, 0.35);
+  }
+
+  /* Solid-color fallback for browsers without backdrop-filter */
+  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .glass, .glass-dark, .glass-card, .glass-data, .btn-light, .btn-dark, .chip {
+      background-color: #161616;
+    }
+    .glass-data {
+      background-color: #131a24;
+    }
+  }
+
+  /* ---------------- Typography accents ---------------- */
+
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(110deg, #c4b5fd 0%, #a78bfa 40%, #fb923c 100%);
+    background-image: linear-gradient(100deg, #ffb84d 0%, #ff8c1a 35%, #ff6a00 75%, #ff3d00 100%);
   }
 
   .gradient-text-orange {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(110deg, #fb923c 0%, #f97316 100%);
+    background-image: linear-gradient(110deg, #ffb84d 0%, #ff6a00 100%);
   }
+
+  /* ---------------- Texture overlays ---------------- */
 
   .tech-grid {
     background-image:
-      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
     background-size: 44px 44px;
   }
 
   .mesh-grid {
-    background-image: radial-gradient(rgba(196,181,253,0.10) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(255, 140, 26, 0.09) 1px, transparent 1px);
     background-size: 26px 26px;
-  }
-
-  .aurora {
-    background-image: linear-gradient(120deg, rgba(124,58,237,0.35), rgba(249,115,22,0.28), rgba(167,139,250,0.30));
-    background-size: 220% 220%;
-    animation: aurora 16s ease-in-out infinite;
   }
 }
 
-@keyframes aurora {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+/* ---------------- Motion ---------------- */
+
+/* Gentle glow pulse on the primary CTA */
+@keyframes cta-pulse {
+  0%, 100% {
+    box-shadow: 0 10px 30px -10px rgba(255, 106, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  }
+  50% {
+    box-shadow: 0 10px 34px -6px rgba(255, 106, 0, 0.75), 0 0 0 5px rgba(255, 106, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  }
 }
 
 /* Headline line-reveal: slide up from 20px below, 0.6s, staggered per line */
@@ -136,10 +258,48 @@
   animation: line-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+/* Scroll reveal — fade/slide-up tiles. Elements are visible by default and
+   only hidden once JS marks the document as ready, so content never disappears
+   when JS is unavailable. Uses the `translate` property (not `transform`) so
+   hover-lift transforms on the same card compose independently. */
+html:not(.reveal-ready) .reveal {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.reveal {
+  opacity: 0;
+  translate: 0 24px;
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    translate 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.3s ease;
+  will-change: opacity, translate;
+}
+
+.reveal.reveal-in {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/* Stagger children of a reveal group */
+.reveal-group > .reveal:nth-child(2) { transition-delay: 0.07s; }
+.reveal-group > .reveal:nth-child(3) { transition-delay: 0.14s; }
+.reveal-group > .reveal:nth-child(4) { transition-delay: 0.21s; }
+.reveal-group > .reveal:nth-child(5) { transition-delay: 0.28s; }
+.reveal-group > .reveal:nth-child(6) { transition-delay: 0.35s; }
+.reveal-group > .reveal:nth-child(7) { transition-delay: 0.42s; }
+.reveal-group > .reveal:nth-child(8) { transition-delay: 0.49s; }
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.001ms !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    translate: none !important;
+    transition: none !important;
   }
 }

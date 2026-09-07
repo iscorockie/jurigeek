@@ -45,10 +45,10 @@ export function Testimonials() {
           sub="From law firms to founders, students to organisations: hear from the people we work with."
         />
 
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="reveal-group mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {testimonials.map((t) => (
-            <figure key={t.name} className="glass-card relative flex flex-col !rounded-3xl !p-6">
-              <QuoteIcon className="h-8 w-8 text-purple-300/70" />
+            <figure key={t.name} className="reveal glass-card relative flex flex-col !rounded-3xl !p-6">
+              <QuoteIcon className="h-8 w-8 text-orange-300/70" />
               <blockquote className="mt-4 text-sm leading-relaxed text-ink-soft">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
@@ -57,7 +57,7 @@ export function Testimonials() {
                   src={t.avatar}
                   alt={t.name}
                   loading="lazy"
-                  className="h-11 w-11 rounded-full border-2 border-purple-400/40 object-cover shadow-glow-soft"
+                  className="h-11 w-11 rounded-full border-2 border-orange-400/40 object-cover shadow-glow-soft"
                 />
                 <div>
                   <p className="text-sm font-extrabold text-ink">{t.name}</p>

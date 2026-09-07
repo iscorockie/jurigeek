@@ -63,7 +63,7 @@ export default function TechLawEducationPage() {
       <Navbar />
       <main id="main">
         {/* Hero */}
-        <section className="relative isolate overflow-hidden bg-brand-100 pt-32 pb-20 sm:pt-40 sm:pb-28">
+        <section className="relative isolate overflow-hidden bg-brand-100 pt-36 pb-20 sm:pt-44 sm:pb-28">
           <GridOverlay />
           <CircuitLines />
           <Orbs />

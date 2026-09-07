@@ -50,7 +50,12 @@ export function Faq() {
           {faqs.map((f, i) => {
             const isOpen = open === i;
             return (
-              <div key={f.q} className="glass overflow-hidden !rounded-2xl">
+              <div
+                key={f.q}
+                className={`reveal glass overflow-hidden !rounded-2xl transition duration-300 hover:-translate-y-0.5 ${
+                  isOpen ? "!border-orange-400/25 shadow-glow-soft" : ""
+                }`}
+              >
                 <button
                   type="button"
                   onClick={() => setOpen(isOpen ? null : i)}

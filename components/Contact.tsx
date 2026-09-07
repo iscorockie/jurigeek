@@ -21,27 +21,27 @@ export function Contact() {
         </div>
 
         {/* Create account */}
-        <div className="glass-card mt-10 p-6 sm:p-8">
+        <div className="reveal glass-card mt-10 p-6 sm:p-8">
           <div className="mx-auto max-w-md">
             <CreateAccountForm />
           </div>
         </div>
 
-        <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <div className="reveal-group mt-6 grid grid-cols-1 gap-6 lg:grid-cols-3">
           {/* Phones */}
-          <div className="glass-card p-8 lg:col-span-2">
+          <div className="reveal glass-card p-8 lg:col-span-2">
             <h3 className="text-xl font-extrabold text-ink">Call or WhatsApp</h3>
             <p className="mt-1 text-sm text-ink-soft">Monday to Friday · Kampala, Uganda (EAT)</p>
             <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {siteConfig.phones.map((p) => (
                 <div key={p.tel} className="glass !rounded-2xl !p-6">
-                  <span className="font-nexa text-sm font-extrabold tabular-nums uppercase tracking-wide text-purple-300">
+                  <span className="font-nexa text-sm font-extrabold tabular-nums uppercase tracking-wide text-orange-300">
                     {p.label}
                   </span>
                   <div className="mt-4 flex flex-wrap gap-2">
                     <a
                       href={`tel:${p.tel}`}
-                      className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-900 to-purple-950 px-4 py-2.5 text-sm font-bold text-white transition hover:from-purple-800 hover:to-purple-900"
+                      className="btn-light !rounded-full !px-4 !py-2.5 !text-sm"
                     >
                       <PhoneIcon className="h-4 w-4" />
                       Call
@@ -50,7 +50,7 @@ export function Contact() {
                       href={waLink(p.wa, "Hello Jurigeek, I'd like to talk with you.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-400 to-orange-500 px-4 py-2.5 text-sm font-bold text-white transition hover:from-orange-300 hover:to-orange-400"
+                      className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#FF6A00] to-[#FF3D00] px-4 py-2.5 text-sm font-bold text-white shadow-[0_8px_24px_-10px_rgba(255,106,0,0.6)] transition hover:from-[#FF8C1A] hover:to-[#FF6A00]"
                     >
                       <WhatsAppIcon className="h-4 w-4" />
                       WhatsApp
@@ -62,7 +62,7 @@ export function Contact() {
           </div>
 
           {/* Socials */}
-          <div className="glass-card flex flex-col p-8">
+          <div className="reveal glass-card flex flex-col p-8">
             <h3 className="text-xl font-extrabold text-ink">Follow along</h3>
             <p className="mt-1 text-sm text-ink-soft">Updates, explainers and behind-the-scenes.</p>
             <div className="mt-6 flex flex-col gap-3">
