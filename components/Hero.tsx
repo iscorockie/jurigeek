@@ -38,7 +38,7 @@ export function Hero() {
           <h1 className="mt-6 text-4xl font-extrabold leading-[1.03] tracking-tight text-ink sm:text-5xl xl:text-[3.7rem] xl:leading-[1.04]">
             <span className="hero-line" style={{ animationDelay: "0.1s" }}>Justice,</span>
             <span className="hero-line" style={{ animationDelay: "0.2s" }}>
-              <span className="gradient-text">automated</span> for everyone.
+              <span className="gradient-text">Automated</span> for Everyone.
             </span>
           </h1>
 

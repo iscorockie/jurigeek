@@ -287,14 +287,15 @@ html:not(.reveal-ready) .reveal {
   translate: 0 0;
 }
 
-/* Stagger children of a reveal group */
-.reveal-group > .reveal:nth-child(2) { transition-delay: 0.07s; }
-.reveal-group > .reveal:nth-child(3) { transition-delay: 0.14s; }
-.reveal-group > .reveal:nth-child(4) { transition-delay: 0.21s; }
-.reveal-group > .reveal:nth-child(5) { transition-delay: 0.28s; }
-.reveal-group > .reveal:nth-child(6) { transition-delay: 0.35s; }
-.reveal-group > .reveal:nth-child(7) { transition-delay: 0.42s; }
-.reveal-group > .reveal:nth-child(8) { transition-delay: 0.49s; }
+/* Stagger children of a reveal group (opacity + translate only —
+   hover transforms stay instant) */
+.reveal-group > .reveal:nth-child(2) { transition-delay: 0.07s, 0.07s, 0s; }
+.reveal-group > .reveal:nth-child(3) { transition-delay: 0.14s, 0.14s, 0s; }
+.reveal-group > .reveal:nth-child(4) { transition-delay: 0.21s, 0.21s, 0s; }
+.reveal-group > .reveal:nth-child(5) { transition-delay: 0.28s, 0.28s, 0s; }
+.reveal-group > .reveal:nth-child(6) { transition-delay: 0.35s, 0.35s, 0s; }
+.reveal-group > .reveal:nth-child(7) { transition-delay: 0.42s, 0.42s, 0s; }
+.reveal-group > .reveal:nth-child(8) { transition-delay: 0.49s, 0.49s, 0s; }
 
 @media (prefers-reduced-motion: reduce) {
   * {
