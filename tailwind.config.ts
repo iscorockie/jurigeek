@@ -64,9 +64,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
-        display: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
-        nexa: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["Figtree", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
+        display: ["Quicksand", "Figtree", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
+        nexa: ["Figtree", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       boxShadow: {
         card: "0 24px 60px -24px rgba(0, 0, 0, 0.7)",

@@ -37,7 +37,7 @@ export function Impact() {
       </div>
 
       {/* marquee strip */}
-      <div className="relative mt-12 border-y border-white/10 bg-white/[0.03] py-4 backdrop-blur-xl">
+      <div className="relative mt-12 border-y border-white/10 bg-white/[0.06] py-4 backdrop-blur-xl">
         <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
           <div className="flex w-max animate-marquee gap-4">
             {loop.map((item, i) => (
