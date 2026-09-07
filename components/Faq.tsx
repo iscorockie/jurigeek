@@ -50,39 +50,46 @@ export function Faq() {
           {faqs.map((f, i) => {
             const isOpen = open === i;
             return (
-              <div
-                key={f.q}
-                className={`reveal glass overflow-hidden !rounded-2xl transition duration-300 hover:-translate-y-0.5 ${
-                  isOpen ? "!border-orange-400/25 shadow-glow-soft" : ""
-                }`}
-              >
-                <button
-                  type="button"
-                  onClick={() => setOpen(isOpen ? null : i)}
-                  aria-expanded={isOpen}
-                  aria-controls={`faq-panel-${i}`}
-                  className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
-                >
-                  <span className="font-display text-base font-bold text-ink">{f.q}</span>
-                  <span
-                    className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#FF6A00] to-[#FF3D00] text-white transition-transform duration-300 ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
-                  >
-                    <ChevronDownIcon className="h-4 w-4" />
-                  </span>
-                </button>
-                {/* Robust collapse: explicit max-height + opacity transition.
-                    Content always stays in the DOM; closing only collapses it,
-                    so the question row and answers can never vanish. */}
+              /* The scroll-reveal hook lives on this wrapper, whose className
+                 is static. The Reveal driver adds `reveal-in` imperatively and
+                 React drops imperatively-added classes whenever it rewrites a
+                 changed className — so the stateful open/closed styling stays
+                 on the inner card. Toggling an item can therefore never blank
+                 out the whole question/answer tile. */
+              <div key={f.q} className="reveal">
                 <div
-                  id={`faq-panel-${i}`}
-                  aria-hidden={!isOpen}
-                  className={`overflow-hidden transition-[max-height,opacity] duration-300 ease-out ${
-                    isOpen ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"
+                  className={`glass overflow-hidden !rounded-2xl transition duration-300 hover:-translate-y-0.5 ${
+                    isOpen ? "!border-orange-400/25 shadow-glow-soft" : ""
                   }`}
                 >
-                  <p className="px-6 pb-5 text-sm leading-relaxed text-ink-soft">{f.a}</p>
+                  <button
+                    type="button"
+                    onClick={() => setOpen(isOpen ? null : i)}
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-panel-${i}`}
+                    className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
+                  >
+                    <span className="font-display text-base font-bold text-ink">{f.q}</span>
+                    <span
+                      className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#FF6A00] to-[#FF3D00] text-white transition-transform duration-300 ${
+                        isOpen ? "rotate-180" : ""
+                      }`}
+                    >
+                      <ChevronDownIcon className="h-4 w-4" />
+                    </span>
+                  </button>
+                  {/* Robust collapse: explicit max-height + opacity transition.
+                      Content always stays in the DOM; closing only collapses it,
+                      so the question row and answers can never vanish. */}
+                  <div
+                    id={`faq-panel-${i}`}
+                    aria-hidden={!isOpen}
+                    className={`overflow-hidden transition-[max-height,opacity] duration-300 ease-out ${
+                      isOpen ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    <p className="px-6 pb-5 text-sm leading-relaxed text-ink-soft">{f.a}</p>
+                  </div>
                 </div>
               </div>
             );
