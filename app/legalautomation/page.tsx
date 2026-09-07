@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SectionHeading } from "@/components/SectionHeading";
 import { BotIcon, ScaleIcon, CodeIcon, CheckIcon } from "@/components/Icons";
-import { Orbs, GridOverlay, CircuitLines, AiBadge } from "@/components/Effects";
+import { Orbs, GridOverlay, CircuitLines } from "@/components/Effects";
 import { CtaButtons } from "@/components/CtaButtons";
 
 export const metadata: Metadata = {
@@ -57,7 +58,7 @@ export default function LegalAutomationPage() {
       <Navbar />
       <main id="main">
         {/* Hero */}
-        <section className="relative isolate overflow-hidden bg-brand-100 pt-32 pb-20 sm:pt-40 sm:pb-28">
+        <section className="relative isolate overflow-hidden bg-brand-100 pt-36 pb-20 sm:pt-44 sm:pb-28">
           <GridOverlay />
           <CircuitLines />
           <Orbs />
@@ -81,10 +82,6 @@ export default function LegalAutomationPage() {
                   your team can focus on the judgment that matters.
                 </p>
 
-                <div className="mt-6">
-                  <AiBadge label="AI-assisted workflow engine" />
-                </div>
-
                 <div className="mt-9">
                   <CtaButtons message="Hello Jurigeek, I'd like to learn more about Legal Automation." />
                 </div>
@@ -93,20 +90,13 @@ export default function LegalAutomationPage() {
               <div className="relative">
                 <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-purple-500/30 via-transparent to-orange-400/30 blur-2xl" />
                 <div className="glass absolute inset-0 -z-0 !rounded-3xl" />
-                <img
+                <Image
                   src="/legalautomation.jpg"
                   alt="Automated legal document drafting on a laptop with scales of justice"
+                  width={1448}
+                  height={1086}
                   className="relative aspect-[4/3] w-full rounded-3xl object-cover shadow-card"
                 />
-                <div className="glass-card absolute -bottom-5 -left-4 flex items-center gap-3 !rounded-2xl !border-white/[0.12] !bg-white/[0.05] !p-4">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-orange-400 to-orange-600 text-white">
-                    <BotIcon className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-extrabold text-ink">Repetitive work</p>
-                    <p className="text-xs text-ink-soft">Reduced to a system</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

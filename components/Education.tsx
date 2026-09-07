@@ -1,4 +1,5 @@
-import { GraduationIcon, CheckIcon, ArrowIcon } from "./Icons";
+import { CheckIcon, ArrowIcon } from "./Icons";
+import Image from "next/image";
 import { waLink, siteConfig } from "./SiteConfig";
 import { Orbs, GridOverlay } from "./Effects";
 
@@ -17,28 +18,20 @@ export function Education() {
       <div className="container-x relative">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
           {/* image */}
-          <div className="relative order-2 lg:order-1">
-            <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-purple-500/25 via-transparent to-orange-400/25 blur-2xl" />
+          <div className="reveal relative order-2 lg:order-1">
+            <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-orange-500/25 via-transparent to-orange-400/20 blur-2xl" />
             <div className="glass absolute inset-0 -z-0 !rounded-3xl" />
-            <img
+            <Image
               src="/about.jpg"
               alt="Jurigeek team collaborating on legal technology"
+              width={1448}
+              height={1086}
               className="relative aspect-[4/3] w-full rounded-3xl object-cover shadow-card"
-              loading="lazy"
             />
-            <div className="glass-card absolute -bottom-5 left-6 flex items-center gap-3 !rounded-2xl !border-white/[0.12] !bg-white/[0.05] !p-4 !shadow-card">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-orange-400 to-orange-600 text-white">
-                <GraduationIcon className="h-6 w-6" />
-              </div>
-              <div>
-                <p className="text-sm font-extrabold text-ink">Tech law education</p>
-                <p className="text-xs text-ink-soft">Built for the real world</p>
-              </div>
-            </div>
           </div>
 
           {/* copy */}
-          <div className="order-1 lg:order-2">
+          <div className="reveal order-1 lg:order-2">
             <span className="eyebrow">Tech law education</span>
             <h2 className="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl">
               Learn where the law meets <span className="gradient-text">the machine</span>.

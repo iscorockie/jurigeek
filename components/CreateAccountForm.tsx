@@ -63,7 +63,7 @@ export function CreateAccountForm() {
     "w-full rounded-xl border border-white/12 bg-white/[0.05] px-4 py-3 text-sm text-ink placeholder:text-ink-soft/60 outline-none backdrop-blur transition focus:border-purple-300/60 focus:bg-white/[0.07] focus:shadow-glow-soft";
 
   return (
-    <form onSubmit={handleSubmit} className="flex h-full flex-col">
+    <form onSubmit={handleSubmit} noValidate className="flex h-full flex-col">
       <div className="flex items-center gap-3">
         <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-purple-600 to-purple-900 text-white shadow-lg">
           <ShieldIcon className="h-6 w-6" />

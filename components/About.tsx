@@ -7,6 +7,7 @@ import {
   SearchIcon,
   GraduationIcon,
 } from "./Icons";
+import Image from "next/image";
 import { Orbs, GridOverlay, CircuitLines } from "./Effects";
 
 export function About() {
@@ -17,7 +18,7 @@ export function About() {
       <CircuitLines />
       <div className="container-x relative">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
-          <div>
+          <div className="reveal">
             <span className="eyebrow">About Us</span>
             <h2 className="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl lg:text-5xl">
               We build the systems that make legal work{" "}
@@ -53,12 +54,12 @@ export function About() {
           </div>
 
           {/* stats widget card (glass) */}
-          <div className="relative mx-auto w-full max-w-sm">
-            <div className="absolute -inset-5 -z-10 rounded-[2.5rem] bg-gradient-to-br from-purple-500/30 via-transparent to-orange-400/30 blur-2xl" />
+          <div className="reveal relative mx-auto w-full max-w-sm">
+            <div className="absolute -inset-5 -z-10 rounded-[2.5rem] bg-gradient-to-br from-orange-500/25 via-transparent to-orange-400/20 blur-2xl" />
             <div className="glass-card overflow-hidden !rounded-3xl !p-6">
               <div className="flex items-center justify-between">
                 <span className="text-sm font-bold text-ink">Access to justice</span>
-                <span className="chip !text-purple-200">
+                <span className="chip !text-orange-200">
                   <span className="relative flex h-2 w-2">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-75" />
                     <span className="relative inline-flex h-2 w-2 rounded-full bg-orange-400" />
@@ -81,7 +82,7 @@ export function About() {
                   { icon: GraduationIcon, label: "Educate", tint: "text-purple-300" },
                   { icon: ShieldIcon, label: "Compliance", tint: "text-orange-400" },
                 ].map((m) => (
-                  <div key={m.label} className="rounded-xl border border-white/[0.12] bg-white/[0.05] px-4 py-3 text-center backdrop-blur">
+                  <div key={m.label} className="rounded-xl border border-white/[0.12] bg-white/[0.08] px-4 py-3 text-center backdrop-blur">
                     <m.icon className={`mx-auto h-5 w-5 ${m.tint}`} />
                     <div className="mt-1.5 text-xs font-bold text-ink">{m.label}</div>
                   </div>
@@ -90,10 +91,11 @@ export function About() {
             </div>
 
             {/* team photo (stock) */}
-            <img
+            <Image
               src="/about-team.jpg"
               alt="A legal professional working at a desk with scales of justice"
-              loading="lazy"
+              width={500}
+              height={334}
               className="mt-4 w-full rounded-2xl border border-white/[0.12] object-cover shadow-card"
             />
           </div>

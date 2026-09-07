@@ -20,10 +20,28 @@ export function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all ${
         scrolled
-          ? "border-b border-white/10 bg-white/[0.06] shadow-[0_8px_30px_-18px_rgba(0,0,0,0.7)] backdrop-blur-xl"
+          ? "border-b border-white/10 bg-[#0d0d0d]/85 shadow-[0_8px_30px_-18px_rgba(0,0,0,0.9)] backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
+      {/* Announcement bar */}
+      <div
+        className={`relative overflow-hidden border-b border-white/10 bg-white/[0.03] backdrop-blur-xl transition-all duration-300 ${
+          scrolled ? "max-h-0 border-b-0 opacity-0" : "max-h-12 opacity-100"
+        }`}
+      >
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-orange-500/[0.08] to-transparent" aria-hidden="true" />
+        <div className="container-x flex h-10 items-center justify-center gap-2 text-center text-xs font-semibold text-white/80 sm:text-[13px]">
+          <span className="hidden h-1.5 w-1.5 rounded-full bg-orange-400 sm:inline-block" />
+          <span>
+            Jurigeek is live across Uganda and expanding across Africa.{" "}
+            <Link href="/#about" className="font-bold text-orange-300 underline-offset-2 transition hover:text-orange-200 hover:underline">
+              Learn more →
+            </Link>
+          </span>
+        </div>
+      </div>
+
       <nav
         className={`container-x flex items-center justify-between transition-[height] duration-300 ease-out ${
           scrolled ? "h-[60px]" : "h-20"
@@ -48,13 +66,13 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href="#contact"
-            className="btn-light hidden !rounded-xl !px-5 !py-2.5 !text-sm md:inline-flex"
+            className="hidden text-sm font-semibold text-ink-soft transition hover:text-ink md:inline-block"
           >
             Sign In
           </a>
           <a
             href="#contact"
-            className="hidden rounded-full bg-gradient-to-r from-orange-400 to-orange-500 px-6 py-3 text-sm font-bold text-purple-950 shadow-[0_10px_30px_-12px_rgba(249,115,22,0.8)] transition hover:from-orange-300 hover:to-orange-400 md:inline-flex"
+            className="btn-light hidden !rounded-full !px-5 !py-2.5 !text-sm md:inline-flex"
           >
             Get Started
           </a>
@@ -77,7 +95,7 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-white/10 bg-brand-100/95 backdrop-blur-xl md:hidden">
+        <div className="border-t border-white/10 bg-[#0d0d0d]/95 backdrop-blur-xl md:hidden">
           <div className="container-x flex flex-col gap-1 py-4">
             {siteConfig.nav.map((item) => (
               <a
@@ -92,14 +110,14 @@ export function Navbar() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="btn-light mt-2 w-full !rounded-xl"
+              className="rounded-xl px-4 py-3 text-sm font-semibold text-ink-soft transition hover:bg-white/10 hover:text-ink"
             >
               Sign In
             </a>
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="rounded-full bg-gradient-to-r from-orange-400 to-orange-500 px-6 py-3 text-center text-sm font-bold text-purple-950"
+              className="btn-light mt-2 w-full !rounded-xl !px-6 !py-3 !text-sm"
             >
               Get Started
             </a>

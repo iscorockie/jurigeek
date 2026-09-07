@@ -5,74 +5,75 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Dark futuristic surfaces (was light "brand" lavender), used as section/page backgrounds
+        // Near-black surfaces for the dark glassmorphism canvas
         brand: {
-          50: "#06030d",
-          100: "#0b0716",
-          200: "#130c23",
-          300: "#1c1332",
-          400: "#271b45",
+          50: "#0a0a0a",
+          100: "#0d0d0d",
+          200: "#111111",
+          300: "#161616",
+          400: "#1c1c1c",
         },
-        // Purple, primary brand accent + dark feature bands
+        // Legacy "purple" tokens remapped to the orange identity ramp
+        // (deep ember at the dark end, hot orange at the bright end)
         purple: {
-          300: "#c4b5fd",
-          400: "#a78bfa",
-          500: "#8b5cf6",
-          600: "#7c3aed",
-          700: "#6d28d9",
-          800: "#5b21b6",
-          900: "#4c1d95",
-          950: "#2e1065",
+          300: "#ffb266",
+          400: "#ff8c1a",
+          500: "#ff7a1a",
+          600: "#ff6a00",
+          700: "#f95d00",
+          800: "#d14a00",
+          900: "#2a0e00",
+          950: "#1a0800",
         },
-        // Orange, accent CTAs, prices, highlights
+        // Orange, the dominant accent
         orange: {
           100: "#ffedd5",
-          200: "#fed7aa",
-          300: "#fdba74",
-          400: "#fb923c",
-          500: "#f97316",
-          600: "#ea580c",
+          200: "#ffd9b3",
+          300: "#ffb266",
+          400: "#ff8c1a",
+          500: "#ff6a00",
+          600: "#ff3d00",
         },
-        // Text (light on dark), was dark purple ink
+        // Ink — off-white headlines, muted grey body
         ink: {
-          DEFAULT: "#f4f1ff",
-          soft: "#b3a7d6",
+          DEFAULT: "#f5f5f5",
+          soft: "#a3a3a3",
         },
-        // Aliases for sections that reference old names
+        // Aliases for sections that reference old names — all warm now
         cream: {
-          50: "#f4f1ff",
-          100: "#ece6ff",
-          200: "#d8cef5",
-          300: "#b8abd9",
+          50: "#f5f5f5",
+          100: "#ececec",
+          200: "#d4d4d4",
+          300: "#a3a3a3",
         },
         leaf: {
-          400: "#a78bfa",
-          500: "#8b5cf6",
-          700: "#6d28d9",
-          800: "#5b21b6",
-          900: "#4c1d95",
-          950: "#160a33",
+          400: "#ff8c1a",
+          500: "#ff6a00",
+          700: "#f95d00",
+          800: "#d14a00",
+          900: "#2a0e00",
+          950: "#1a0800",
         },
         lime: {
           100: "#ffedd5",
-          200: "#fed7aa",
-          300: "#fdba74",
-          400: "#fb923c",
-          500: "#f97316",
-          600: "#ea580c",
+          200: "#ffd9b3",
+          300: "#ffb266",
+          400: "#ff8c1a",
+          500: "#ff6a00",
+          600: "#ff3d00",
         },
       },
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
-        display: ["Sora", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
-        nexa: ["Nexa", "Nexa Bold", "Nexa Light", "Nexa Book", "Sora", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["Figtree", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
+        display: ["Quicksand", "Figtree", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
+        nexa: ["Figtree", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       boxShadow: {
         card: "0 24px 60px -24px rgba(0, 0, 0, 0.7)",
         pill: "0 10px 30px -12px rgba(0, 0, 0, 0.6)",
-        glow: "0 0 50px -10px rgba(139, 92, 246, 0.55)",
-        "glow-orange": "0 0 50px -10px rgba(249, 115, 22, 0.5)",
-        "glow-soft": "0 0 30px -8px rgba(139, 92, 246, 0.35)",
+        glow: "0 0 50px -10px rgba(255, 106, 0, 0.45)",
+        "glow-orange": "0 0 50px -10px rgba(255, 106, 0, 0.55)",
+        "glow-soft": "0 0 30px -8px rgba(255, 106, 0, 0.3)",
       },
       keyframes: {
         floaty: {

@@ -50,30 +50,39 @@ export function Faq() {
           {faqs.map((f, i) => {
             const isOpen = open === i;
             return (
-              <div key={f.q} className="glass overflow-hidden !rounded-2xl">
+              <div
+                key={f.q}
+                className={`reveal glass overflow-hidden !rounded-2xl transition duration-300 hover:-translate-y-0.5 ${
+                  isOpen ? "!border-orange-400/25 shadow-glow-soft" : ""
+                }`}
+              >
                 <button
                   type="button"
                   onClick={() => setOpen(isOpen ? null : i)}
                   aria-expanded={isOpen}
+                  aria-controls={`faq-panel-${i}`}
                   className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
                 >
-                  <span className="text-base font-extrabold text-ink">{f.q}</span>
+                  <span className="font-display text-base font-bold text-ink">{f.q}</span>
                   <span
-                    className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-purple-600 to-orange-400 text-white transition-transform ${
+                    className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#FF6A00] to-[#FF3D00] text-white transition-transform duration-300 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   >
                     <ChevronDownIcon className="h-4 w-4" />
                   </span>
                 </button>
+                {/* Robust collapse: explicit max-height + opacity transition.
+                    Content always stays in the DOM; closing only collapses it,
+                    so the question row and answers can never vanish. */}
                 <div
-                  className={`grid transition-all duration-300 ${
-                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                  id={`faq-panel-${i}`}
+                  aria-hidden={!isOpen}
+                  className={`overflow-hidden transition-[max-height,opacity] duration-300 ease-out ${
+                    isOpen ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="overflow-hidden">
-                    <p className="px-6 pb-5 text-sm leading-relaxed text-ink-soft">{f.a}</p>
-                  </div>
+                  <p className="px-6 pb-5 text-sm leading-relaxed text-ink-soft">{f.a}</p>
                 </div>
               </div>
             );

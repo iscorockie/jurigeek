@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jurigeek.org"),
@@ -60,7 +61,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0b0716",
+  themeColor: "#0a0a0a",
   width: "device-width",
   initialScale: 1,
 };
@@ -70,13 +71,8 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.cdnfonts.com" />
-        <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/nexa-bold" />
-        <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/nexa-light" />
-        <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/nexa-book" />
-      </head>
       <body className="min-h-screen font-sans">
+        <Reveal />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-orange-400 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
