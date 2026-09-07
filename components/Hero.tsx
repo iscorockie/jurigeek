@@ -32,7 +32,7 @@ export function Hero() {
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
           <span className="glass eyebrow !inline-flex !rounded-full !border-white/15 !bg-white/[0.1] !px-4 !py-2">
             <span className="h-1.5 w-1.5 rounded-full bg-orange-400" />
-            Legal automation · Tech law · AI
+            Legal Automation · Tech Law · AI
           </span>
 
           <h1 className="mt-6 text-4xl font-extrabold leading-[1.03] tracking-tight text-ink sm:text-5xl xl:text-[3.7rem] xl:leading-[1.04]">
