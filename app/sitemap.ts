@@ -4,25 +4,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   return [
     {
-      url: "https://jurigeek.org",
+      url: "https://jurigeeks.org",
       lastModified: now,
       changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: "https://jurigeek.org/legalautomation",
+      url: "https://jurigeeks.org/legalautomation",
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://jurigeek.org/techlaw-consultancy",
+      url: "https://jurigeeks.org/techlaw-consultancy",
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://jurigeek.org/tech-law-education",
+      url: "https://jurigeeks.org/tech-law-education",
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,

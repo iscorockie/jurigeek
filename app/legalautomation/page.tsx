@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   title: "Legal Automation",
   description:
     "Jurigeek designs and builds tools that turn repetitive legal work into fast, reliable systems, from document drafting and contract assembly to client intake and workflows.",
-  alternates: { canonical: "https://jurigeek.org/legalautomation" },
+  alternates: { canonical: "https://jurigeeks.org/legalautomation" },
   openGraph: {
     title: "Legal Automation · Jurigeek",
     description:
       "Turn repetitive legal work into fast, reliable systems: document drafting, contract assembly, client intake and workflows.",
-    url: "https://jurigeek.org/legalautomation",
+    url: "https://jurigeeks.org/legalautomation",
   },
 };
 

@@ -3,7 +3,7 @@ import "./globals.css";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jurigeek.org"),
+  metadataBase: new URL("https://jurigeeks.org"),
   title: {
     default: "Jurigeek | Justice, automated",
     template: "%s · Jurigeek",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://jurigeek.org",
+    url: "https://jurigeeks.org",
     siteName: "Jurigeek",
     title: "Jurigeek | Justice, automated",
     description:

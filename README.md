@@ -2,7 +2,7 @@
 
 **Bridging access to justice through legal automation, technology law consultancy and tech law education.**
 
-This is the production website for Jurigeek, deployed to Vercel at [jurigeek.org](https://jurigeek.org).
+This is the production website for Jurigeek, deployed to Vercel at [jurigeeks.org](https://jurigeeks.org).
 
 ## Stack
 
@@ -37,7 +37,7 @@ The project is already configured for Vercel (`vercel.json`, `next.config.mjs`).
 1. Push this repository to GitHub (see below).
 2. Go to [vercel.com/new](https://vercel.com/new) and select the `iscorockie/jurigeek` repository.
 3. Vercel auto-detects Next.js; leave the defaults and click **Deploy**.
-4. After deploy, go to **Settings → Domains** and add the `jurigeek.org` custom domain. Vercel will guide you through adding the required DNS records (A / CNAME / TXT) at your domain registrar.
+4. After deploy, go to **Settings → Domains** and add the `jurigeeks.org` custom domain. Vercel will guide you through adding the required DNS records (A / CNAME / TXT) at your domain registrar.
 
 ### Option B: via the Vercel CLI
 
@@ -46,7 +46,7 @@ npm i -g vercel
 vercel login
 vercel
 vercel --prod
-vercel domains add jurigeek.org
+vercel domains add jurigeeks.org
 ```
 
 ## Site content

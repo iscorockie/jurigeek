@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   title: "Tech Law Education",
   description:
     "Courses, workshops and training where law and technology meet, building the next generation of legal minds for the digital economy.",
-  alternates: { canonical: "https://jurigeek.org/tech-law-education" },
+  alternates: { canonical: "https://jurigeeks.org/tech-law-education" },
   openGraph: {
     title: "Tech Law Education · Jurigeek",
     description:
       "Learn where the law meets the machine: training, workshops and accessible learning built for the real world.",
-    url: "https://jurigeek.org/tech-law-education",
+    url: "https://jurigeeks.org/tech-law-education",
   },
 };
 

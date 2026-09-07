@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   title: "Technology Law Consultancy",
   description:
     "Practical, current legal advisory for the digital economy: data protection, regulatory & compliance advisory and digital contracts & policy for innovators, founders and organisations.",
-  alternates: { canonical: "https://jurigeek.org/techlaw-consultancy" },
+  alternates: { canonical: "https://jurigeeks.org/techlaw-consultancy" },
   openGraph: {
     title: "Technology Law Consultancy · Jurigeek",
     description:
       "Navigate data protection, compliance and technology risk with practical advisory built for the digital economy.",
-    url: "https://jurigeek.org/techlaw-consultancy",
+    url: "https://jurigeeks.org/techlaw-consultancy",
   },
 };
 

@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Jurigeek",
-  domain: "jurigeek.org",
+  domain: "jurigeeks.org",
   tagline: "Justice, automated.",
   phones: [
     { label: "+256 778 929 063", tel: "+256778929063", wa: "256778929063" },

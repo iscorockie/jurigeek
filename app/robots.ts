@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://jurigeek.org/sitemap.xml",
+    sitemap: "https://jurigeeks.org/sitemap.xml",
   };
 }
