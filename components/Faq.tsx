@@ -72,13 +72,14 @@ export function Faq() {
                     <ChevronDownIcon className="h-4 w-4" />
                   </span>
                 </button>
-                {/* Robust collapse: max-height + opacity (works in all browsers,
-                    unlike the grid-rows animation which can leave panels hidden). */}
+                {/* Robust collapse: explicit max-height + opacity transition.
+                    Content always stays in the DOM; closing only collapses it,
+                    so the question row and answers can never vanish. */}
                 <div
                   id={`faq-panel-${i}`}
                   aria-hidden={!isOpen}
-                  className={`overflow-hidden transition-all duration-300 ease-out ${
-                    isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                  className={`overflow-hidden transition-[max-height,opacity] duration-300 ease-out ${
+                    isOpen ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
                   <p className="px-6 pb-5 text-sm leading-relaxed text-ink-soft">{f.a}</p>
