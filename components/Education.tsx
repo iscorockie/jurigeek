@@ -1,4 +1,4 @@
-import { GraduationIcon, CheckIcon, ArrowIcon } from "./Icons";
+import { CheckIcon, ArrowIcon } from "./Icons";
 import Image from "next/image";
 import { waLink, siteConfig } from "./SiteConfig";
 import { Orbs, GridOverlay } from "./Effects";
@@ -28,15 +28,6 @@ export function Education() {
               height={1086}
               className="relative aspect-[4/3] w-full rounded-3xl object-cover shadow-card"
             />
-            <div className="glass-card absolute -bottom-5 left-6 flex items-center gap-3 !rounded-2xl !border-white/[0.12] !bg-white/[0.12] !p-4 !shadow-card">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-orange-400 to-orange-600 text-white">
-                <GraduationIcon className="h-6 w-6" />
-              </div>
-              <div>
-                <p className="text-sm font-extrabold text-ink">Tech law education</p>
-                <p className="text-xs text-ink-soft">Built for the real world</p>
-              </div>
-            </div>
           </div>
 
           {/* copy */}

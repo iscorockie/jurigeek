@@ -1,5 +1,5 @@
 import { SparklesIcon, SearchIcon, CodeIcon, ShieldIcon, BoltIcon, ArrowIcon } from "./Icons";
-import { Orbs, GridOverlay, CircuitLines, AiBadge } from "./Effects";
+import { Orbs, GridOverlay, CircuitLines } from "./Effects";
 import { waLink, siteConfig } from "./SiteConfig";
 
 const features = [
@@ -34,10 +34,6 @@ export function JuriAI() {
               coordination in seconds. Built to automate the mechanics of legal
               work, so people get to justice faster.
             </p>
-
-            <div className="mt-6">
-              <AiBadge label="Powered by automation" />
-            </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
               <a

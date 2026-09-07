@@ -1,11 +1,10 @@
 import {
   ArrowIcon,
   PhoneIcon,
-  CheckIcon,
   StarIcon,
 } from "./Icons";
 import Image from "next/image";
-import { AiBadge, GridOverlay } from "./Effects";
+import { GridOverlay } from "./Effects";
 
 const heroStats = [
   { value: "2500+", label: "Workflows automated" },
@@ -13,8 +12,6 @@ const heroStats = [
   { value: "36", label: "Jurisdictions reached" },
   { value: "<24h", label: "Avg. response" },
 ];
-
-const trustItems = ["Verified outcomes", "Secure & confidential", "Built in Africa"];
 
 export function Hero() {
   return (
@@ -60,19 +57,6 @@ export function Hero() {
               <PhoneIcon className="h-4 w-4" />
               Book a call
             </a>
-          </div>
-
-          <div className="mt-6 flex flex-wrap justify-center gap-2">
-            {trustItems.map((t) => (
-              <span key={t} className="chip !text-orange-200">
-                <CheckIcon className="h-3.5 w-3.5 text-orange-400" />
-                {t}
-              </span>
-            ))}
-          </div>
-
-          <div className="mt-6">
-            <AiBadge label="AI-assisted legal workflows" />
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ import {
   LayersIcon,
   CheckIcon,
 } from "@/components/Icons";
-import { Orbs, GridOverlay, CircuitLines, AiBadge } from "@/components/Effects";
+import { Orbs, GridOverlay, CircuitLines } from "@/components/Effects";
 import { CtaButtons } from "@/components/CtaButtons";
 
 export const metadata: Metadata = {
@@ -87,10 +87,6 @@ export default function TechLawConsultancyPage() {
                   technology risk, without slowing you down.
                 </p>
 
-                <div className="mt-6">
-                  <AiBadge label="Regulatory-grade advisory" />
-                </div>
-
                 <div className="mt-9">
                   <CtaButtons message="Hello Jurigeek, I'd like to talk about Technology Law Consultancy." />
                 </div>
@@ -106,15 +102,6 @@ export default function TechLawConsultancyPage() {
                   height={1086}
                   className="relative aspect-[4/3] w-full rounded-3xl object-cover shadow-card"
                 />
-                <div className="glass-card absolute -bottom-5 -left-4 flex items-center gap-3 !rounded-2xl !border-white/[0.12] !bg-white/[0.12] !p-4">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-orange-400 to-orange-600 text-white">
-                    <ShieldIcon className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-extrabold text-ink">Technology risk</p>
-                    <p className="text-xs text-ink-soft">Turned into clarity</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
